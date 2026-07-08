@@ -1,0 +1,71 @@
+{
+  "results": [
+    {
+      "id": "TC-F01",
+      "ok": true,
+      "msg": "Home loaded \"Tochi — Mua sắm thời trang & phong cách\"",
+      "extra": ""
+    },
+    {
+      "id": "TC-F02a",
+      "ok": true,
+      "msg": "Hero images present",
+      "extra": "imgCount=21"
+    },
+    {
+      "id": "TC-F04a",
+      "ok": true,
+      "msg": "FlashSale section present=true",
+      "extra": ""
+    },
+    {
+      "id": "TC-F06a",
+      "ok": true,
+      "msg": "MostLiked section present=true",
+      "extra": ""
+    },
+    {
+      "id": "TC-F04",
+      "ok": true,
+      "msg": "countdown ticking",
+      "extra": "11:50:02 -> 11:49:59"
+    },
+    {
+      "id": "TC-F02",
+      "ok": "warn",
+      "msg": "Hero autoplay — so sánh F02-hero-t0 vs t3 (thủ công)",
+      "extra": ""
+    },
+    {
+      "id": "BUG-C7-ui",
+      "ok": "warn",
+      "msg": "Guest MostLiked hearts (xem BUG-C7-mostliked-guest.png) — API đã xác nhận is_favorited=true",
+      "extra": "heart-ish=3"
+    },
+    {
+      "id": "TC-F10",
+      "ok": "warn",
+      "msg": "Login/account UI mở (dialog/password field=0)",
+      "extra": ""
+    },
+    {
+      "id": "TC-F11",
+      "ok": true,
+      "msg": "Language switch đổi nội dung=true",
+      "extra": ""
+    },
+    {
+      "id": "TC-R03",
+      "ok": true,
+      "msg": "Mobile 390px screenshot captured (evidence)",
+      "extra": ""
+    },
+    {
+      "id": "TC-console",
+      "ok": true,
+      "msg": "console/page errors=0",
+      "extra": ""
+    }
+  ],
+  "consoleErrors": []
+}

@@ -1,0 +1,620 @@
+{
+  "status": 200,
+  "contentType": "application/json",
+  "body": {
+    "status": "SUCCESS",
+    "message": "SUCCESS",
+    "data": [
+      {
+        "id": 1,
+        "parent_id": null,
+        "translations": [
+          {
+            "id": 1,
+            "locale": "en",
+            "locale_name": "US",
+            "name": "qui qui",
+            "slug": "qui-qui"
+          },
+          {
+            "id": 2,
+            "locale": "vi",
+            "locale_name": "VN",
+            "name": "cum consequatur",
+            "slug": "cum-consequatur"
+          }
+        ],
+        "children": [
+          {
+            "id": 2,
+            "parent_id": 1,
+            "translations": [
+              {
+                "id": 3,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "maiores perferendis",
+                "slug": "maiores-perferendis"
+              },
+              {
+                "id": 4,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "rerum qui",
+                "slug": "rerum-qui"
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "parent_id": 1,
+            "translations": [
+              {
+                "id": 5,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "et blanditiis",
+                "slug": "et-blanditiis"
+              },
+              {
+                "id": 6,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "facilis expedita",
+                "slug": "facilis-expedita"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "parent_id": 1,
+            "translations": [
+              {
+                "id": 7,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "blanditiis ut",
+                "slug": "blanditiis-ut"
+              },
+              {
+                "id": 8,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "tempore sapiente",
+                "slug": "tempore-sapiente"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "parent_id": 1,
+            "translations": [
+              {
+                "id": 9,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "consequuntur quasi",
+                "slug": "consequuntur-quasi"
+              },
+              {
+                "id": 10,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "illo ab",
+                "slug": "illo-ab"
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "parent_id": 1,
+            "translations": [
+              {
+                "id": 11,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "iusto vel",
+                "slug": "iusto-vel"
+              },
+              {
+                "id": 12,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "consequatur nihil",
+                "slug": "consequatur-nihil"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "parent_id": null,
+        "translations": [
+          {
+            "id": 13,
+            "locale": "en",
+            "locale_name": "US",
+            "name": "doloremque nisi",
+            "slug": "doloremque-nisi"
+          },
+          {
+            "id": 14,
+            "locale": "vi",
+            "locale_name": "VN",
+            "name": "esse consequuntur",
+            "slug": "esse-consequuntur"
+          }
+        ],
+        "children": [
+          {
+            "id": 8,
+            "parent_id": 7,
+            "translations": [
+              {
+                "id": 15,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "nam veritatis",
+                "slug": "nam-veritatis"
+              },
+              {
+                "id": 16,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "ut voluptatem",
+                "slug": "ut-voluptatem"
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "parent_id": 7,
+            "translations": [
+              {
+                "id": 17,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "repudiandae ea",
+                "slug": "repudiandae-ea"
+              },
+              {
+                "id": 18,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "natus in",
+                "slug": "natus-in"
+              }
+            ]
+          },
+          {
+            "id": 10,
+            "parent_id": 7,
+            "translations": [
+              {
+                "id": 19,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "est debitis",
+                "slug": "est-debitis"
+              },
+              {
+                "id": 20,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "ipsam vitae",
+                "slug": "ipsam-vitae"
+              }
+            ]
+          },
+          {
+            "id": 11,
+            "parent_id": 7,
+            "translations": [
+              {
+                "id": 21,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "accusamus qui",
+                "slug": "accusamus-qui"
+              },
+              {
+                "id": 22,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "consectetur occaecati",
+                "slug": "consectetur-occaecati"
+              }
+            ]
+          },
+          {
+            "id": 12,
+            "parent_id": 7,
+            "translations": [
+              {
+                "id": 23,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "ut laborum",
+                "slug": "ut-laborum"
+              },
+              {
+                "id": 24,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "ut voluptatibus",
+                "slug": "ut-voluptatibus"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "parent_id": null,
+        "translations": [
+          {
+            "id": 25,
+            "locale": "en",
+            "locale_name": "US",
+            "name": "autem fugit",
+            "slug": "autem-fugit"
+          },
+          {
+            "id": 26,
+            "locale": "vi",
+            "locale_name": "VN",
+            "name": "nemo mollitia",
+            "slug": "nemo-mollitia"
+          }
+        ],
+        "children": [
+          {
+            "id": 14,
+            "parent_id": 13,
+            "translations": [
+              {
+                "id": 27,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "ratione numquam",
+                "slug": "ratione-numquam"
+              },
+              {
+                "id": 28,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "facere eveniet",
+                "slug": "facere-eveniet"
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "parent_id": 13,
+            "translations": [
+              {
+                "id": 29,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "sit eos",
+                "slug": "sit-eos"
+              },
+              {
+                "id": 30,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "necessitatibus aut",
+                "slug": "necessitatibus-aut"
+              }
+            ]
+          },
+          {
+            "id": 16,
+            "parent_id": 13,
+            "translations": [
+              {
+                "id": 31,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "quia ducimus",
+                "slug": "quia-ducimus"
+              },
+              {
+                "id": 32,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "modi nobis",
+                "slug": "modi-nobis"
+              }
+            ]
+          },
+          {
+            "id": 17,
+            "parent_id": 13,
+            "translations": [
+              {
+                "id": 33,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "qui cumque",
+                "slug": "qui-cumque"
+              },
+              {
+                "id": 34,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "modi in",
+                "slug": "modi-in"
+              }
+            ]
+          },
+          {
+            "id": 18,
+            "parent_id": 13,
+            "translations": [
+              {
+                "id": 35,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "maxime qui",
+                "slug": "maxime-qui"
+              },
+              {
+                "id": 36,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "nihil iste",
+                "slug": "nihil-iste"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "parent_id": null,
+        "translations": [
+          {
+            "id": 37,
+            "locale": "en",
+            "locale_name": "US",
+            "name": "et inventore",
+            "slug": "et-inventore"
+          },
+          {
+            "id": 38,
+            "locale": "vi",
+            "locale_name": "VN",
+            "name": "odit a",
+            "slug": "odit-a"
+          }
+        ],
+        "children": [
+          {
+            "id": 20,
+            "parent_id": 19,
+            "translations": [
+              {
+                "id": 39,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "quod quam",
+                "slug": "quod-quam"
+              },
+              {
+                "id": 40,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "veniam expedita",
+                "slug": "veniam-expedita"
+              }
+            ]
+          },
+          {
+            "id": 21,
+            "parent_id": 19,
+            "translations": [
+              {
+                "id": 41,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "nostrum voluptatem",
+                "slug": "nostrum-voluptatem"
+              },
+              {
+                "id": 42,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "nam dignissimos",
+                "slug": "nam-dignissimos"
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "parent_id": 19,
+            "translations": [
+              {
+                "id": 43,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "accusamus modi",
+                "slug": "accusamus-modi"
+              },
+              {
+                "id": 44,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "repudiandae commodi",
+                "slug": "repudiandae-commodi"
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "parent_id": 19,
+            "translations": [
+              {
+                "id": 45,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "sunt magni",
+                "slug": "sunt-magni"
+              },
+              {
+                "id": 46,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "sed magnam",
+                "slug": "sed-magnam"
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "parent_id": 19,
+            "translations": [
+              {
+                "id": 47,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "et sed",
+                "slug": "et-sed"
+              },
+              {
+                "id": 48,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "blanditiis ipsa",
+                "slug": "blanditiis-ipsa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "parent_id": null,
+        "translations": [
+          {
+            "id": 49,
+            "locale": "en",
+            "locale_name": "US",
+            "name": "omnis ratione",
+            "slug": "omnis-ratione"
+          },
+          {
+            "id": 50,
+            "locale": "vi",
+            "locale_name": "VN",
+            "name": "rerum quae",
+            "slug": "rerum-quae"
+          }
+        ],
+        "children": [
+          {
+            "id": 26,
+            "parent_id": 25,
+            "translations": [
+              {
+                "id": 51,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "asperiores optio",
+                "slug": "asperiores-optio"
+              },
+              {
+                "id": 52,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "quasi voluptatibus",
+                "slug": "quasi-voluptatibus"
+              }
+            ]
+          },
+          {
+            "id": 27,
+            "parent_id": 25,
+            "translations": [
+              {
+                "id": 53,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "ut eius",
+                "slug": "ut-eius"
+              },
+              {
+                "id": 54,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "odio eum",
+                "slug": "odio-eum"
+              }
+            ]
+          },
+          {
+            "id": 28,
+            "parent_id": 25,
+            "translations": [
+              {
+                "id": 55,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "distinctio nihil",
+                "slug": "distinctio-nihil"
+              },
+              {
+                "id": 56,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "enim non",
+                "slug": "enim-non"
+              }
+            ]
+          },
+          {
+            "id": 29,
+            "parent_id": 25,
+            "translations": [
+              {
+                "id": 57,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "atque nisi",
+                "slug": "atque-nisi"
+              },
+              {
+                "id": 58,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "nisi et",
+                "slug": "nisi-et"
+              }
+            ]
+          },
+          {
+            "id": 30,
+            "parent_id": 25,
+            "translations": [
+              {
+                "id": 59,
+                "locale": "en",
+                "locale_name": "US",
+                "name": "rem itaque",
+                "slug": "rem-itaque"
+              },
+              {
+                "id": 60,
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "voluptates saepe",
+                "slug": "voluptates-saepe"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

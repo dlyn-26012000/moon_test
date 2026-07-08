@@ -1,0 +1,80 @@
+{
+  "module": "user/home",
+  "date": "2026-07-08",
+  "tester": "AI QA Automation",
+  "tool": { "framework": "Playwright", "version": "1.61.1", "browser": "Chromium-1228", "node": "v24.15.0" },
+  "environment": "production",
+  "urls": { "ui": "https://moon.dlyn.site/", "api": "https://api-moon.dlyn.site/api/" },
+  "scope": {
+    "in": ["user home guest", "user home authenticated", "guest-vs-auth comparison", "home api", "validation/security", "responsive", "performance-observation"],
+    "out": ["product-detail", "cart", "checkout", "profile", "register", "forgot-password", "cms", "admin"],
+    "precondition": ["login (user001) — not under test"]
+  },
+  "results": {
+    "total_testcases": 29,
+    "passed": 25,
+    "warning": 3,
+    "failed": 1,
+    "blocked": 0,
+    "api_probes": 8
+  },
+  "performance": {
+    "guest_load_ms": 1797,
+    "duplicated_client_endpoints": ["user/categories x2"],
+    "note": "home data is server-side rendered (ISR revalidate=300s)"
+  },
+  "responsive": {
+    "viewports_tested": 9,
+    "horizontal_scroll_issues": 0,
+    "groups": ["desktop:1920x1080,1440x900,1366x768", "tablet:ipad,ipad-air", "mobile:iphone14,iphone-se,pixel7,galaxy-s23"]
+  },
+  "bugs": [
+    { "id": "BUG-004", "title": "Home header search is non-functional (no handler)", "severity": "high", "priority": "high", "status": "fixed", "type": "functional", "testcase": "TC-F09" },
+    { "id": "BUG-001", "title": "top-favorites is_favorited defaults true (guest sees all hearts filled)", "severity": "medium", "priority": "high", "status": "fixed", "type": "logic/ux", "testcase": "TC-A04/TC-L02" },
+    { "id": "BUG-002", "title": "Array filter causes HTTP 500 + internal error disclosure", "severity": "medium", "priority": "medium", "status": "fixed", "type": "robustness/security", "testcase": "TC-V04" },
+    { "id": "BUG-003", "title": "top-favorites ignores limit param", "severity": "low", "priority": "low", "status": "fixed", "type": "logic", "testcase": "TC-V01" }
+  ],
+  "bug_counts_by_severity": { "high": 1, "medium": 2, "low": 1 },
+  "potential_risks": 6,
+  "security": {
+    "sql_injection": "sanitized (orders whitelist, HTTP 200)",
+    "validation": "per_page=0/abc -> HTTP 422",
+    "headers": ["X-Content-Type-Options: nosniff"],
+    "issues": ["information disclosure via BUG-002 (php error leaked, likely APP_DEBUG=true)"]
+  },
+  "release_recommendation": {
+    "verdict": "conditional",
+    "label": "Có thể Release sau khi sửa các lỗi quan trọng",
+    "must_fix": ["BUG-004", "BUG-002"],
+    "recommended_fix": ["BUG-001"],
+    "nice_to_have": ["BUG-003"]
+  },
+  "fixes": {
+    "date": "2026-07-08",
+    "all_bugs_fixed": true,
+    "requires_deploy": true,
+    "backend_tests": "php artisan test FavoriteProductTest+ProductTest -> 19 passed (5 new regression tests)",
+    "frontend": "tsc --noEmit -> 0 errors; eslint clean",
+    "changed_files": [
+      "api/app/Http/Resources/Api/User/Product/FavoriteProductResource.php (BUG-001)",
+      "api/app/Services/Api/User/FavoriteProductService.php (BUG-001)",
+      "api/app/Http/Controllers/Api/User/FavoriteProductController.php (BUG-003)",
+      "api/app/Http/Requests/ListRequest.php (BUG-002)",
+      "user/components/header/Header.tsx (BUG-004 + search a11y)",
+      "user/services/category.service.ts (perf: dedupe categories fetch)"
+    ],
+    "improvements_addressed": ["search-a11y", "categories-dedupe", "validate-clamp-params", "image-alt-verified"],
+    "improvements_deferred": ["empty-state-visibility (intentional)", "ISR-revalidate-tuning (ops)", "APP_DEBUG=false (deploy config)", "silent-error-feedback", "WCAG-axe-run"]
+  },
+  "evidence": {
+    "screenshots": "evidence/ui_ux/screenshots/",
+    "responsive": "evidence/ui_ux/responsive/",
+    "videos": "evidence/ui_ux/videos/",
+    "console_log": "evidence/ui_ux/console.log",
+    "har": "evidence/api/network.har",
+    "api_log": "evidence/api/api-log.md",
+    "traces": "evidence/traces/guest-trace.zip",
+    "machine_results": "assets/test-data/run-results.json"
+  },
+  "reports": ["report.md", "testcases.md", "bug_report.md", "improvement.md", "risks.md", "summary.json"]
+}

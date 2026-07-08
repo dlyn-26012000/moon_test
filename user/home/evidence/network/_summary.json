@@ -1,0 +1,122 @@
+[
+  {
+    "id": "TC-A01",
+    "ok": true,
+    "msg": "banners HTTP 200",
+    "extra": "items=10 189ms"
+  },
+  {
+    "id": "TC-B-banner",
+    "ok": true,
+    "msg": "banners is_active=true sortedByOrderAsc=true file.url=true",
+    "extra": "types=1,3,2"
+  },
+  {
+    "id": "TC-A02",
+    "ok": true,
+    "msg": "products is_sale HTTP 200",
+    "extra": "items=4 (≤4?) 163ms"
+  },
+  {
+    "id": "TC-A03",
+    "ok": true,
+    "msg": "products is_featured HTTP 200",
+    "extra": "items=4 101ms"
+  },
+  {
+    "id": "TC-A04",
+    "ok": true,
+    "msg": "top-favorites HTTP 200 count>0=true sortedDesc=true",
+    "extra": "items=3"
+  },
+  {
+    "id": "TC-A05",
+    "ok": true,
+    "msg": "campaigns/active HTTP 200",
+    "extra": "items=0 (empty ⇒ FlashSale dùng is_sale)"
+  },
+  {
+    "id": "TC-A06",
+    "ok": true,
+    "msg": "envelope keys=status,message,data",
+    "extra": "content-type=application/json"
+  },
+  {
+    "id": "BUG-C1",
+    "ok": false,
+    "msg": "top-favorites limit param IGNORED (bug confirmed)",
+    "extra": "limit2=3 limit8=3 limit50=3"
+  },
+  {
+    "id": "TC-V02",
+    "ok": true,
+    "msg": "per_page=0 HTTP 422 (mong 422 min:1)",
+    "extra": ""
+  },
+  {
+    "id": "TC-V03",
+    "ok": true,
+    "msg": "per_page=abc HTTP 422 (không được 500)",
+    "extra": ""
+  },
+  {
+    "id": "BUG-C2",
+    "ok": false,
+    "msg": "filters[is_sale][]=1 HTTP 500 (500 — bug confirmed)",
+    "extra": ""
+  },
+  {
+    "id": "TC-V04",
+    "ok": false,
+    "msg": "array filter graceful=false",
+    "extra": ""
+  },
+  {
+    "id": "TC-V05",
+    "ok": true,
+    "msg": "orders[password]=asc HTTP 200 (whitelist ⇒ 200, bỏ qua cột)",
+    "extra": ""
+  },
+  {
+    "id": "TC-V06",
+    "ok": true,
+    "msg": "orders SQLi HTTP 200 (không thực thi ⇒ không 500)",
+    "extra": ""
+  },
+  {
+    "id": "TC-S01",
+    "ok": true,
+    "msg": "5 endpoint public không cần token",
+    "extra": ""
+  },
+  {
+    "id": "TC-S04",
+    "ok": true,
+    "msg": "top-favorites PII leak=false",
+    "extra": ""
+  },
+  {
+    "id": "TC-S02",
+    "ok": "warn",
+    "msg": "guest response chứa field riêng tư=true",
+    "extra": ""
+  },
+  {
+    "id": "TC-S06",
+    "ok": true,
+    "msg": "security headers present: x-content-type-options,x-frame-options,content-security-policy,strict-transport-security",
+    "extra": ""
+  },
+  {
+    "id": "TC-S07",
+    "ok": true,
+    "msg": "POST vào GET endpoint HTTP 405 (mong 405)",
+    "extra": ""
+  },
+  {
+    "id": "BUG-C6",
+    "ok": "warn",
+    "msg": "language header vi vs en cho response GIỐNG (i18n có thể không đổi qua header)",
+    "extra": ""
+  }
+]

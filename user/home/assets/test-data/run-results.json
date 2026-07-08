@@ -1,0 +1,197 @@
+{
+  "at": "2026-07-08T07:52:36.924Z",
+  "base": "https://moon.dlyn.site",
+  "totals": {
+    "total": 29,
+    "pass": 25,
+    "fail": 0,
+    "warn": 4,
+    "blocked": 0
+  },
+  "perf": {
+    "guestLoadMs": 1797,
+    "homeApiCallCount": 2,
+    "duplicatedEndpoints": [
+      [
+        "https://api-moon.dlyn.site/api/user/categories",
+        2
+      ]
+    ]
+  },
+  "results": [
+    {
+      "id": "TC-F01",
+      "status": "pass",
+      "msg": "Guest Home loaded",
+      "extra": "1797ms"
+    },
+    {
+      "id": "TC-F01.hero",
+      "status": "pass",
+      "msg": "section hero present",
+      "extra": ""
+    },
+    {
+      "id": "TC-F01.feature",
+      "status": "pass",
+      "msg": "section feature present",
+      "extra": ""
+    },
+    {
+      "id": "TC-F01.flashsale",
+      "status": "pass",
+      "msg": "section flashsale present",
+      "extra": ""
+    },
+    {
+      "id": "TC-F01.mostliked",
+      "status": "pass",
+      "msg": "section mostliked present",
+      "extra": ""
+    },
+    {
+      "id": "TC-F01.featured",
+      "status": "pass",
+      "msg": "section featured present",
+      "extra": ""
+    },
+    {
+      "id": "TC-F01.membership",
+      "status": "pass",
+      "msg": "section membership present",
+      "extra": ""
+    },
+    {
+      "id": "TC-F03",
+      "status": "pass",
+      "msg": "hero/banner images rendered",
+      "extra": "count=21"
+    },
+    {
+      "id": "TC-F04",
+      "status": "pass",
+      "msg": "FlashSale countdown detected",
+      "extra": "matches=1"
+    },
+    {
+      "id": "BUG-001-live",
+      "status": "warn",
+      "msg": "heart fill sampled on Home (see API for definitive proof)",
+      "extra": "filled=0 outline=12"
+    },
+    {
+      "id": "TC-F09",
+      "status": "warn",
+      "msg": "Home search navigates",
+      "extra": "https://moon.dlyn.site/"
+    },
+    {
+      "id": "TC-F08",
+      "status": "pass",
+      "msg": "product card links to detail",
+      "extra": "/products/qui-eos-laborum-variant-tojq17"
+    },
+    {
+      "id": "TC-F05_07",
+      "status": "pass",
+      "msg": "see-all links present",
+      "extra": "/products?sale=1 , /favorites , /products?featured=1 , /favorites"
+    },
+    {
+      "id": "TC-F10",
+      "status": "pass",
+      "msg": "Guest account menu opens login modal",
+      "extra": ""
+    },
+    {
+      "id": "TC-F11",
+      "status": "pass",
+      "msg": "language switch vi→en reflected",
+      "extra": ""
+    },
+    {
+      "id": "TC-P01",
+      "status": "warn",
+      "msg": "Home API call pattern",
+      "extra": "calls=2 dup=[[\"https://api-moon.dlyn.site/api/user/categories\",2]]"
+    },
+    {
+      "id": "TC-L01",
+      "status": "pass",
+      "msg": "Login precondition → Home header logged-in state",
+      "extra": "modal closed"
+    },
+    {
+      "id": "TC-L01b",
+      "status": "pass",
+      "msg": "account dropdown shows logged options",
+      "extra": "logout present"
+    },
+    {
+      "id": "TC-L03",
+      "status": "pass",
+      "msg": "favorite toggle fires API",
+      "extra": "POST favorites/toggle x1"
+    },
+    {
+      "id": "TC-L05",
+      "status": "warn",
+      "msg": "Logout returns Home to guest state",
+      "extra": ""
+    },
+    {
+      "id": "TC-R-desktop-1920x1080",
+      "status": "pass",
+      "msg": "desktop 1920x1080 no h-scroll",
+      "extra": "scrollWidth=1920 innerWidth=1920"
+    },
+    {
+      "id": "TC-R-desktop-1440x900",
+      "status": "pass",
+      "msg": "desktop 1440x900 no h-scroll",
+      "extra": "scrollWidth=1440 innerWidth=1440"
+    },
+    {
+      "id": "TC-R-desktop-1366x768",
+      "status": "pass",
+      "msg": "desktop 1366x768 no h-scroll",
+      "extra": "scrollWidth=1366 innerWidth=1366"
+    },
+    {
+      "id": "TC-R-tablet-ipad-768x1024",
+      "status": "pass",
+      "msg": "tablet 768x1024 no h-scroll",
+      "extra": "scrollWidth=768 innerWidth=768"
+    },
+    {
+      "id": "TC-R-tablet-ipad-air-820x1180",
+      "status": "pass",
+      "msg": "tablet 820x1180 no h-scroll",
+      "extra": "scrollWidth=820 innerWidth=820"
+    },
+    {
+      "id": "TC-R-mobile-iphone14-390x844",
+      "status": "pass",
+      "msg": "mobile 390x844 no h-scroll",
+      "extra": "scrollWidth=390 innerWidth=390"
+    },
+    {
+      "id": "TC-R-mobile-iphone-se-375x667",
+      "status": "pass",
+      "msg": "mobile 375x667 no h-scroll",
+      "extra": "scrollWidth=375 innerWidth=375"
+    },
+    {
+      "id": "TC-R-mobile-pixel7-412x915",
+      "status": "pass",
+      "msg": "mobile 412x915 no h-scroll",
+      "extra": "scrollWidth=412 innerWidth=412"
+    },
+    {
+      "id": "TC-R-mobile-galaxy-s23-360x780",
+      "status": "pass",
+      "msg": "mobile 360x780 no h-scroll",
+      "extra": "scrollWidth=360 innerWidth=360"
+    }
+  ]
+}

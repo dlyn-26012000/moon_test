@@ -1,0 +1,15 @@
+{
+  "method": "GET",
+  "url": "https://api-moon.dlyn.site/api/user/categories",
+  "headers": {
+    "language": "vi",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "referer": "https://moon.dlyn.site/",
+    "accept-language": "vi-VN",
+    "sec-ch-ua": "\"HeadlessChrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+    "sec-ch-ua-mobile": "?0",
+    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/149.0.7827.55 Safari/537.36",
+    "accept": "application/json, text/plain, */*"
+  },
+  "postData": null
+}
