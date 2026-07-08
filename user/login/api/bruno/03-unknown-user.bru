@@ -1,0 +1,26 @@
+meta {
+  name: 03 Unknown user (BUG-002 enumeration)
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/user/auth/login
+  body: json
+  auth: none
+}
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+body:json {
+  {
+    "username": "no_such_user_zzz",
+    "password": "password"
+  }
+}
+tests {
+  test("USER_NOT_FOUND leaks account existence", function() {
+    if (res.getStatus() !== 429)
+      expect(res.getBody().message).to.equal("USER_NOT_FOUND");
+  });
+}

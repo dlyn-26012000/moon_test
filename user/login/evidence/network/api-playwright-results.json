@@ -1,0 +1,82 @@
+{
+  "at": "2026-07-08T03:49:23.736Z",
+  "total": 15,
+  "passed": 15,
+  "results": [
+    {
+      "name": "login success -> 200 LOGIN_SUCCESS",
+      "ok": true,
+      "detail": "code=200"
+    },
+    {
+      "name": "token shape <id>|<hash>",
+      "ok": true,
+      "detail": "20|ZicU9Wx4vHj602ord8sVzlS5IwkqVG8BWXwj6uV410463f13"
+    },
+    {
+      "name": "BUG-001 fixed: wrong password -> 401 (not 500)",
+      "ok": true,
+      "detail": "actual=401"
+    },
+    {
+      "name": "wrong password message INVALID_CREDENTIALS",
+      "ok": true,
+      "detail": "msg=INVALID_CREDENTIALS"
+    },
+    {
+      "name": "BUG-005 fixed: X-Content-Type-Options present",
+      "ok": true,
+      "detail": "nosniff"
+    },
+    {
+      "name": "BUG-005 fixed: X-Frame-Options present",
+      "ok": true,
+      "detail": "DENY"
+    },
+    {
+      "name": "BUG-005 fixed: Content-Security-Policy present",
+      "ok": true,
+      "detail": "default-src 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "BUG-005 fixed: CORS not wildcard",
+      "ok": true,
+      "detail": "(none)"
+    },
+    {
+      "name": "BUG-002 fixed: unknown user returns generic INVALID_CREDENTIALS (no enumeration)",
+      "ok": true,
+      "detail": "msg=INVALID_CREDENTIALS"
+    },
+    {
+      "name": "BUG-002 fixed: unknown-user status 401 (not 500)",
+      "ok": true,
+      "detail": "code=401"
+    },
+    {
+      "name": "missing fields -> 422 VALIDATION_ERROR",
+      "ok": true,
+      "detail": "code=422"
+    },
+    {
+      "name": "password type-juggling rejected (422)",
+      "ok": true,
+      "detail": "code=422"
+    },
+    {
+      "name": "GET /me with token -> 200",
+      "ok": true,
+      "detail": "code=200"
+    },
+    {
+      "name": "logout -> 200",
+      "ok": true,
+      "detail": "code=200"
+    },
+    {
+      "name": "reused token after logout -> 401",
+      "ok": true,
+      "detail": "code=401"
+    }
+  ]
+}

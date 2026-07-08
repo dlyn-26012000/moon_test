@@ -1,0 +1,33 @@
+meta {
+  name: 01 Login success
+  type: http
+  seq: 1
+}
+post {
+  url: {{baseUrl}}/user/auth/login
+  body: json
+  auth: none
+}
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+body:json {
+  {
+    "username": "{{username}}",
+    "password": "{{password}}"
+  }
+}
+assert {
+  res.body.status: eq SUCCESS
+  res.body.message: eq LOGIN_SUCCESS
+}
+script:post-response {
+  if (res.getStatus() === 200) bru.setVar("token", res.getBody().data);
+}
+tests {
+  test("token has <id>|<hash> shape", function() {
+    if (res.getStatus() === 200)
+      expect(res.getBody().data).to.match(/^[0-9]+\|[A-Za-z0-9]+$/);
+  });
+}

@@ -1,0 +1,23 @@
+meta {
+  name: 04 Missing fields (422)
+  type: http
+  seq: 4
+}
+post {
+  url: {{baseUrl}}/user/auth/login
+  body: json
+  auth: none
+}
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+body:json {
+  {}
+}
+tests {
+  test("422 validation", function() {
+    if (res.getStatus() === 422)
+      expect(res.getBody().errors).to.have.property("username");
+  });
+}

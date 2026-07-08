@@ -1,0 +1,154 @@
+{
+  "at": "2026-07-08T03:47:01.583Z",
+  "target": "https://moon.dlyn.site",
+  "total": 29,
+  "passed": 29,
+  "failed": 0,
+  "results": [
+    {
+      "name": "[vi] open login modal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] title = \"Đăng nhập\"",
+      "ok": true,
+      "detail": "Đăng nhập"
+    },
+    {
+      "name": "[vi] username label present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] password label present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] forgot-password link present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] role=dialog + aria-modal",
+      "ok": true,
+      "detail": "role=dialog aria-modal=true"
+    },
+    {
+      "name": "[vi] username auto-focused",
+      "ok": true,
+      "detail": "activeElement=login-username"
+    },
+    {
+      "name": "[vi] submit disabled when empty",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] submit disabled when password empty",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] submit disabled when username all-spaces",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] password toggle text<->password",
+      "ok": true,
+      "detail": "password->text"
+    },
+    {
+      "name": "[vi] valid login closes modal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[vi] valid login stores auth_token",
+      "ok": true,
+      "detail": "19|rit9Nur5v…"
+    },
+    {
+      "name": "[en] open login modal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] title = \"Login\"",
+      "ok": true,
+      "detail": "Login"
+    },
+    {
+      "name": "[en] username label present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] password label present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] forgot-password link present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] role=dialog + aria-modal",
+      "ok": true,
+      "detail": "role=dialog aria-modal=true"
+    },
+    {
+      "name": "[en] username auto-focused",
+      "ok": true,
+      "detail": "activeElement=login-username"
+    },
+    {
+      "name": "[en] submit disabled when empty",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] submit disabled when password empty",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] submit disabled when username all-spaces",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[en] password toggle text<->password",
+      "ok": true,
+      "detail": "password->text"
+    },
+    {
+      "name": "[en] wrong password shows error",
+      "ok": true,
+      "detail": "⚠️\nIncorrect username or password."
+    },
+    {
+      "name": "[en] BUG-003 fixed: error is localised (not raw code)",
+      "ok": true,
+      "detail": "⚠️\nIncorrect username or password."
+    },
+    {
+      "name": "[en] BUG-004 fixed: error box has role=alert",
+      "ok": true,
+      "detail": "role=alert"
+    },
+    {
+      "name": "[mobile] modal opens on 390x844",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "[mobile] no horizontal overflow",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
