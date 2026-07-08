@@ -1,110 +1,50 @@
 # Nhiệm vụ kiểm thử
 
-Sử dụng toàn bộ quy tắc, tiêu chuẩn, cấu trúc thư mục, định dạng báo cáo và quy trình kiểm thử đã được định nghĩa trong file **test/rule.md**.
+Sử dụng toàn bộ quy tắc, tiêu chuẩn, cấu trúc thư mục, định dạng báo cáo và quy trình kiểm thử đã được định nghĩa trong file `test/rule.md`.
 
 ---
 
 # Module
 
-user/home
+`user/product-detail`
 
 ---
 
 # Mục tiêu
 
-Thực hiện kiểm thử End-to-End cho **màn hình Home của User** ở **hai trạng thái**:
+Thực hiện kiểm thử End-to-End cho **màn hình Product Detail của User** trong cả hai trạng thái:
 
-* Người dùng **chưa đăng nhập** (Guest).
-* Người dùng **đã đăng nhập** (Authenticated User).
-
-Đảm bảo cả hai trạng thái đều được kiểm thử đầy đủ và độc lập.
+- **Guest (Chưa đăng nhập)**
+- **Authenticated User (Đã đăng nhập)**
 
 ---
 
 # Phạm vi kiểm thử
 
-Chỉ kiểm thử **màn hình Home của User**.
+Chỉ kiểm thử màn hình **Product Detail**.
 
-Bao gồm nhưng không giới hạn:
-
-* Giao diện Home.
-* Dữ liệu hiển thị.
-* Banner.
-* Slider.
-* Danh sách sản phẩm (nếu có).
-* Danh mục.
-* Search trên Home (nếu có).
-* Navigation từ Home.
-* Button.
-* Link.
-* Loading.
-* Empty State.
-* Error State.
-* API được Home sử dụng.
-* Responsive.
-* UI.
-* UX.
-* Performance Observation.
-* Bug Hunting.
-
-### Trạng thái cần kiểm thử
-
-#### 1. Guest (Chưa đăng nhập)
-
-Kiểm thử toàn bộ hành vi của Home khi người dùng chưa đăng nhập.
-
-Bao gồm:
-
-* Nội dung hiển thị.
-* Các button.
-* Điều hướng.
-* Quyền truy cập.
-* API.
-* UI.
-* UX.
-* Responsive.
-
-#### 2. Authenticated User (Đã đăng nhập)
-
-Sử dụng tài khoản được cung cấp để đăng nhập và kiểm thử lại toàn bộ màn hình Home.
-
-So sánh sự khác biệt giữa Guest và Authenticated User.
-
-Kiểm tra:
-
-* Dữ liệu hiển thị.
-* Thông tin người dùng.
-* Các tính năng chỉ dành cho người đã đăng nhập.
-* API.
-* UI.
-* UX.
-* Responsive.
-
-### Ngoài phạm vi
+Việc đăng nhập chỉ được sử dụng làm **Precondition** để kiểm thử trạng thái người dùng đã đăng nhập. **Không kiểm thử chức năng Login**.
 
 Không kiểm thử các module khác như:
 
-* Authentication
-* Register
-* Forgot Password
-* Profile
-* Product Detail
-* Cart
-* Checkout
-* CMS
-* Admin
+- Authentication
+- Register
+- Forgot Password
+- Profile
+- Cart *(chỉ xác minh hành vi Add to Cart từ Product Detail, không kiểm thử toàn bộ module Cart)*
+- Checkout
+- Wishlist *(chỉ kiểm tra thao tác phát sinh từ Product Detail)*
+- CMS
+- Admin
+- ...
 
-Nếu cần đăng nhập để vào trạng thái Authenticated thì Login chỉ được xem là **Precondition**, không kiểm thử chức năng Login.
-
-Nếu phát hiện lỗi ở module ngoài phạm vi nhưng ảnh hưởng trực tiếp đến Home thì ghi nhận trong phần **Potential Risks** hoặc **Bug** nếu có thể tái hiện.
+Nếu phát hiện lỗi thuộc module khác nhưng ảnh hưởng trực tiếp đến Product Detail thì ghi nhận trong báo cáo.
 
 ---
 
 # Requirement
 
-> Dán toàn bộ Requirement của màn hình Home tại đây.
-
-Nếu Requirement chưa đầy đủ, hãy phân tích giao diện và hành vi hiện có của hệ thống để suy luận các trường hợp kiểm thử hợp lý, đồng thời ghi rõ các giả định trong báo cáo.
+> Dán toàn bộ Requirement của màn hình Product Detail tại đây.
 
 ---
 
@@ -114,40 +54,265 @@ Nếu Requirement chưa đầy đủ, hãy phân tích giao diện và hành vi 
 
 https://moon.dlyn.site
 
-**Tài khoản kiểm thử**
+### Tài khoản kiểm thử
 
-Email / Username:
-
-user001
-
-Password:
-
-password
+| Username | Password |
+|----------|----------|
+| user001 | password |
 
 ---
 
 # Yêu cầu thực hiện
 
-Thực hiện đầy đủ các bước theo template trong **test/rule.md**.
+Thực hiện đầy đủ các bước theo template:
+
+- Phân tích Requirement.
+- Phân tích luồng nghiệp vụ Product Detail.
+- Sinh đầy đủ Test Case.
+- Kiểm thử ở trạng thái Guest.
+- Kiểm thử ở trạng thái Authenticated User.
+- Thực hiện kiểm thử bằng Playwright.
+- Kiểm thử Functional.
+- Kiểm thử UI.
+- Kiểm thử UX.
+- Kiểm thử Responsive.
+- Kiểm thử API (nếu Product Detail sử dụng API).
+- Kiểm thử SEO cơ bản (nếu là trang public).
+- Kiểm thử Performance cơ bản.
+- Thực hiện Bug Hunting.
+- Thu thập đầy đủ Evidence.
+- Xuất toàn bộ kết quả theo đúng cấu trúc quy định trong `test/rule.md`.
+
+---
+
+# Nội dung kiểm thử
+
+## 1. Guest (Chưa đăng nhập)
+
+### Hiển thị thông tin sản phẩm
+
+- Tên sản phẩm
+- Hình ảnh
+- Gallery
+- Thumbnail
+- Zoom (nếu có)
+- Giá
+- Giá khuyến mãi
+- Badge
+- SKU
+- Danh mục
+- Thương hiệu
+- Tồn kho
+- Mô tả
+- Thông số kỹ thuật
+
+### Điều hướng
+
+- Truy cập trực tiếp bằng URL
+- Refresh
+- Browser Back
+- Browser Forward
+- Deep Link
+- Breadcrumb
+
+### Related Products
+
+- Hiển thị đúng
+- Điều hướng đúng
+
+### Rating & Review
+
+- Hiển thị đúng
+- Load More / Pagination (nếu có)
+
+### Add to Cart
+
+Kiểm tra hành vi khi chưa đăng nhập:
+
+- Cho phép thêm vào giỏ
+- Hoặc yêu cầu đăng nhập
+- Hoặc chuyển sang Login
+- Hoặc hiển thị popup
+
+### Wishlist
+
+- Kiểm tra xử lý khi chưa đăng nhập
+
+### Buy Now
+
+- Kiểm tra xử lý khi chưa đăng nhập
+
+---
+
+## 2. Authenticated User (Đã đăng nhập)
+
+Đăng nhập bằng:
+
+```
+Username: user001
+Password: password
+```
+
+Sau khi đăng nhập, thực hiện lại toàn bộ các test ở Guest và kiểm thử thêm:
+
+### Add to Cart
+
+- Thành công
+- Đúng biến thể
+- Đúng số lượng
+- Loading
+- Double Click
+- Disable Button
+- Toast Message
+
+### Buy Now
+
+- Thành công
+- Validate
+- Loading
+
+### Wishlist
+
+- Add
+- Remove
+- Refresh vẫn giữ trạng thái
+- Đồng bộ UI
+
+### Review
+
+- Tạo review (nếu được phép)
+- Rating
+- Validate
+- Upload ảnh (nếu có)
+
+### Quyền người dùng
+
+Nếu hệ thống hỗ trợ:
+
+- Giá thành viên
+- Flash Sale
+- Reward Point
+- Membership
+- Voucher
+- Giá theo đăng nhập
+
+---
+
+# Kiểm thử Functional
+
+- Product Information
+- Gallery
+- Variant
+- Quantity
+- Add to Cart
+- Buy Now
+- Wishlist
+- Review
+- Rating
+- Related Products
+- Breadcrumb
+- URL
+- Refresh
+- Browser Navigation
+- Error Handling
+
+---
+
+# Kiểm thử UI
+
+- Layout
+- Font
+- Alignment
+- Padding
+- Margin
+- Button
+- Icon
+- Image
+- Skeleton
+- Empty State
+- Overflow
+- Responsive Layout
+
+---
+
+# Kiểm thử UX
+
+- Loading
+- Skeleton
+- Animation
+- Hover
+- Focus
+- Keyboard Navigation
+- Accessibility cơ bản
+
+---
+
+# Kiểm thử Responsive
+
+- Desktop
+- Tablet
+- Mobile
+- Landscape
+
+---
+
+# Kiểm thử API
+
+Nếu Product Detail sử dụng API:
+
+- Success Response
+- Validation
+- Unauthorized
+- Forbidden
+- Empty Data
+- Retry
+- Network Error
+- Status Code
+- Loading State
+
+---
+
+# Bug Hunting
 
 Bao gồm:
 
-* Phân tích Requirement.
-* Phân tích luồng nghiệp vụ của Home.
-* Sinh đầy đủ Test Case.
-* Kiểm thử trạng thái Guest.
-* Kiểm thử trạng thái Authenticated User.
-* So sánh sự khác biệt giữa hai trạng thái.
-* Thực hiện kiểm thử bằng Playwright.
-* Kiểm thử Functional.
-* Kiểm thử API (nếu Home sử dụng API).
-* Kiểm thử UI.
-* Kiểm thử UX.
-* Kiểm thử Responsive trên Desktop, Tablet và Mobile.
-* Quan sát Performance.
-* Thực hiện Bug Hunting.
-* Thu thập đầy đủ Evidence.
-* Xuất toàn bộ kết quả theo đúng cấu trúc thư mục đã quy định trong **test/rule.md**.
+- Functional Bug
+- UI Bug
+- UX Bug
+- Logic Bug
+- Responsive Bug
+- Console Error
+- Network Error
+- Performance Issue
+- Accessibility Issue
+- Security Issue trong phạm vi Product Detail
+
+---
+
+# Deliverables
+
+Xuất đầy đủ theo đúng cấu trúc trong `test/rule.md`.
+
+```
+test/
+└── user/
+    └── product-detail/
+        ├── report.md
+        ├── testcases.md
+        ├── bug_report.md
+        ├── improvement.md
+        ├── risks.md
+        ├── summary.json
+        ├── script/
+        │   └── product-detail.spec.js
+        └── evidence/
+            ├── api/
+            ├── ui/
+            ├── network/
+            ├── console/
+            ├── screenshot/
+            └── video/
+```
 
 ---
 
@@ -155,16 +320,18 @@ Bao gồm:
 
 Chỉ kết thúc khi:
 
-* Đã kiểm thử đầy đủ Home ở cả hai trạng thái Guest và Authenticated User.
-* Đã thực hiện toàn bộ Test Case hợp lý.
-* Không còn trường hợp kiểm thử có ý nghĩa.
-* Đã lưu đầy đủ Screenshot, Video, Network Log, Console Log, HAR (nếu có) và các Evidence khác.
-* Đã tạo đầy đủ:
-
-  * `report.md`
-  * `testcases.md`
-  * `bug_report.md`
-  * `improvement.md`
-  * `risks.md`
-  * `summary.json`
-* Toàn bộ kết quả được lưu đúng cấu trúc thư mục theo quy định trong **test/rule.md**.
+- Đã kiểm thử đầy đủ với **Guest User**.
+- Đã kiểm thử đầy đủ với **Authenticated User**.
+- Đã thực hiện toàn bộ Test Case hợp lý.
+- Không còn trường hợp kiểm thử có ý nghĩa.
+- Đã hoàn thành Functional, UI, UX, Responsive, API và Bug Hunting.
+- Đã lưu đầy đủ Screenshot, Video, Network Log, Console Log và các Evidence.
+- Đã tạo đầy đủ:
+  - `report.md`
+  - `testcases.md`
+  - `bug_report.md`
+  - `improvement.md`
+  - `risks.md`
+  - `summary.json`
+- Đã tạo Playwright script có thể chạy lại.
+- Đã lưu toàn bộ Evidence theo đúng cấu trúc quy định trong `test/rule.md`.

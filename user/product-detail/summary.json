@@ -1,0 +1,103 @@
+{
+  "module": "user/product-detail",
+  "date": "2026-07-08",
+  "tester": "AI QA Automation",
+  "tool": { "framework": "Playwright", "version": "1.61.1", "browser": "Chromium 149.0.7827.55", "node": "v24.18.0" },
+  "environment": "production",
+  "urls": {
+    "ui": "https://moon.dlyn.site/products/qui-eos-laborum-variant-tojq17",
+    "api": "https://api-moon.dlyn.site/api"
+  },
+  "sample_products": {
+    "with_variants": { "slug": "qui-eos-laborum-variant-tojq17", "id": 100, "variants": 3 },
+    "simple": { "slug": "quo-asperiores-quaerat-m0ybqx", "id": 1 }
+  },
+  "scope": {
+    "in": [
+      "product-detail guest",
+      "product-detail authenticated",
+      "gallery/zoom/thumbnail",
+      "variant/quantity",
+      "add-to-cart",
+      "buy-now",
+      "wishlist (from detail)",
+      "rating/review display + api",
+      "related-products/recently-viewed",
+      "navigation (url/refresh/back-forward/deep-link/404)",
+      "api",
+      "ui",
+      "ux",
+      "responsive",
+      "seo",
+      "performance-observation",
+      "bug-hunting"
+    ],
+    "out": ["login", "register", "forgot-password", "profile", "cart-page", "checkout", "wishlist-page", "cms", "admin"],
+    "precondition": ["login (user001) — not under test"]
+  },
+  "results": {
+    "total_assertions": 72,
+    "passed": 64,
+    "warning": 6,
+    "failed": 2,
+    "blocked": 0,
+    "skipped": 0
+  },
+  "performance": {
+    "api_detail_ms": 100,
+    "dom_content_loaded_ms": 438,
+    "note": "networkidle unreliable — Pusher websocket keeps connection open; DOMContentLoaded ~300-440ms is the real metric"
+  },
+  "responsive": {
+    "viewports_tested": 9,
+    "horizontal_scroll_issues": 0,
+    "groups": [
+      "desktop:1920x1080,1440x900,1366x768",
+      "tablet:ipad-air",
+      "mobile:iphone14,iphone-se,pixel7,galaxy-s23,landscape"
+    ]
+  },
+  "bugs": [
+    { "id": "BUG-001", "title": "cart/add returns HTTP 500 when quantity exceeds stock (should be 422)", "severity": "high", "priority": "high", "status": "open", "type": "api/robustness", "testcase": "API-05b" },
+    { "id": "BUG-002", "title": "cart/add returns HTTP 500 + misleading INSUFFICIENT_INVENTORY for non-existent product (should be 404)", "severity": "medium", "priority": "medium", "status": "open", "type": "api", "testcase": "API-06" },
+    { "id": "BUG-003", "title": "Impossible variant combination shows 'Hết hàng' instead of 'combination unavailable'", "severity": "medium", "priority": "medium", "status": "open", "type": "ux/logic", "testcase": "BH-02/G-VAR-02" },
+    { "id": "BUG-004", "title": "Invalid product slug returns HTTP 200 (soft 404) instead of 404", "severity": "low", "priority": "low", "status": "open", "type": "seo/routing", "testcase": "G-NAV-05" },
+    { "id": "BUG-005", "title": "Add-to-cart toast/button leaks raw i18n keys 'adding'/'to_cart'", "severity": "medium", "priority": "medium", "status": "open", "type": "ui/i18n", "testcase": "BH-01" }
+  ],
+  "bug_counts_by_severity": { "high": 1, "medium": 3, "low": 1 },
+  "potential_risks": 6,
+  "api_verification": {
+    "detail_status": 200,
+    "detail_not_found_status": 404,
+    "reviews_status": 200,
+    "reviews_stats_status": 200,
+    "cart_add_valid": 200,
+    "cart_add_qty0": 422,
+    "cart_add_over_stock": 500,
+    "cart_add_missing_product": 500,
+    "favorites_toggle_no_token": 401,
+    "favorites_toggle_token": 200,
+    "reviews_post_no_token": 401,
+    "note": "401/422 only when Accept: application/json is sent (axios does); without it Laravel returns 302 redirect"
+  },
+  "security": {
+    "xss_query_string": "not executed (safe)",
+    "auth_public_detail": "GET detail is public (200 without token) — expected",
+    "note": "no sensitive data leaked on detail page; console clean on detail page (0 errors)"
+  },
+  "evidence": {
+    "api": "evidence/api/",
+    "screenshots": "evidence/screenshot/",
+    "responsive": "evidence/responsive/",
+    "videos": "evidence/video/",
+    "console": "evidence/console/",
+    "network_har": "evidence/network/network.har",
+    "trace": "evidence/network/guest-trace.zip",
+    "page_source": "evidence/ui/page-source.html",
+    "machine_results": "evidence/results.json"
+  },
+  "script": "script/product-detail.spec.js",
+  "release_recommendation": "conditional",
+  "release_note": "Có thể release sau khi sửa BUG-001 (High) và BUG-005 (Medium, UX); BUG-002/003 nên sửa; BUG-004 có thể để đợt sau.",
+  "reports": ["report.md", "testcases.md", "bug_report.md", "improvement.md", "risks.md", "summary.json"]
+}

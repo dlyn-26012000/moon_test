@@ -1,0 +1,8 @@
+{
+  "status": "SUCCESS",
+  "message": "SUCCESS",
+  "data": {
+    "is_favorited": true,
+    "favorites_count": 1
+  }
+}

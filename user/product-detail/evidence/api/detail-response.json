@@ -1,0 +1,278 @@
+{
+  "status": "SUCCESS",
+  "message": "SUCCESS",
+  "data": {
+    "id": 100,
+    "sku": "PROD-L6IMCNOK",
+    "has_variants": true,
+    "translations": [
+      {
+        "locale": "en",
+        "locale_name": "US",
+        "name": "qui dolores praesentium (Variant)",
+        "slug": "qui-dolores-praesentium-variant-yjmy0l"
+      },
+      {
+        "locale": "vi",
+        "locale_name": "VN",
+        "name": "qui eos laborum (Variant)",
+        "slug": "qui-eos-laborum-variant-tojq17"
+      }
+    ],
+    "images": [
+      {
+        "id": 200,
+        "file_id": 1,
+        "type": "gallery",
+        "type_name": "GALLERY",
+        "file": {
+          "id": 1,
+          "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+          "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+        }
+      }
+    ],
+    "attribute_values": [
+      {
+        "id": 1,
+        "code": "7xdjosKg",
+        "name": "size",
+        "values": [
+          {
+            "id": 3,
+            "value": "M"
+          },
+          {
+            "id": 1,
+            "value": "XS"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "code": "erDcFm55",
+        "name": "Color",
+        "values": [
+          {
+            "id": 10,
+            "value": "White"
+          },
+          {
+            "id": 9,
+            "value": "Black"
+          },
+          {
+            "id": 8,
+            "value": "Yellow"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "id": 189,
+        "sku": "PROD-L6IMCNOK-3-10",
+        "attribute_values": [
+          {
+            "attribute_id": 1,
+            "attribute_value_id": 3,
+            "attribute_name": "size",
+            "attribute_value_name": "M"
+          },
+          {
+            "attribute_id": 2,
+            "attribute_value_id": 10,
+            "attribute_name": "Color",
+            "attribute_value_name": "White"
+          }
+        ],
+        "prices": [
+          {
+            "id": 239,
+            "token": {
+              "id": 1,
+              "name": "VND",
+              "symbol": "VND",
+              "rate": "1.00000",
+              "rate_formated": "1",
+              "can_deposit": false,
+              "can_withdraw": false,
+              "payment_methods": [
+                "cod",
+                "bank_transfer",
+                "wallet"
+              ]
+            },
+            "price": "188458.00000000",
+            "price_formatted": "188,458",
+            "sale_price": "147961.00000000",
+            "sale_price_formatted": "147,961",
+            "sale_start_at": "02:39:06 20-06-2026",
+            "sale_end_at": "02:39:06 26-07-2026"
+          }
+        ],
+        "inventories": [
+          {
+            "id": 239,
+            "quantity": 85
+          }
+        ]
+      },
+      {
+        "id": 190,
+        "sku": "PROD-L6IMCNOK-1-9",
+        "attribute_values": [
+          {
+            "attribute_id": 1,
+            "attribute_value_id": 1,
+            "attribute_name": "size",
+            "attribute_value_name": "XS"
+          },
+          {
+            "attribute_id": 2,
+            "attribute_value_id": 9,
+            "attribute_name": "Color",
+            "attribute_value_name": "Black"
+          }
+        ],
+        "prices": [
+          {
+            "id": 240,
+            "token": {
+              "id": 1,
+              "name": "VND",
+              "symbol": "VND",
+              "rate": "1.00000",
+              "rate_formated": "1",
+              "can_deposit": false,
+              "can_withdraw": false,
+              "payment_methods": [
+                "cod",
+                "bank_transfer",
+                "wallet"
+              ]
+            },
+            "price": "340069.00000000",
+            "price_formatted": "340,069",
+            "sale_price": "167968.00000000",
+            "sale_price_formatted": "167,968",
+            "sale_start_at": "02:39:06 26-06-2026",
+            "sale_end_at": "02:39:06 18-07-2026"
+          }
+        ],
+        "inventories": [
+          {
+            "id": 240,
+            "quantity": 54
+          }
+        ]
+      },
+      {
+        "id": 191,
+        "sku": "PROD-L6IMCNOK-1-8",
+        "attribute_values": [
+          {
+            "attribute_id": 1,
+            "attribute_value_id": 1,
+            "attribute_name": "size",
+            "attribute_value_name": "XS"
+          },
+          {
+            "attribute_id": 2,
+            "attribute_value_id": 8,
+            "attribute_name": "Color",
+            "attribute_value_name": "Yellow"
+          }
+        ],
+        "prices": [
+          {
+            "id": 241,
+            "token": {
+              "id": 1,
+              "name": "VND",
+              "symbol": "VND",
+              "rate": "1.00000",
+              "rate_formated": "1",
+              "can_deposit": false,
+              "can_withdraw": false,
+              "payment_methods": [
+                "cod",
+                "bank_transfer",
+                "wallet"
+              ]
+            },
+            "price": "517656.00000000",
+            "price_formatted": "517,656",
+            "sale_price": "517656.00000000",
+            "sale_price_formatted": "517,656",
+            "sale_start_at": "14:03:46 08-07-2026",
+            "sale_end_at": "14:03:46 08-07-2026"
+          }
+        ],
+        "inventories": [
+          {
+            "id": 241,
+            "quantity": 99
+          }
+        ]
+      }
+    ],
+    "price": {
+      "id": 239,
+      "token": {
+        "id": 1,
+        "name": "VND",
+        "symbol": "VND",
+        "rate": "1.00000",
+        "rate_formated": "1",
+        "can_deposit": false,
+        "can_withdraw": false,
+        "payment_methods": [
+          "cod",
+          "bank_transfer",
+          "wallet"
+        ]
+      },
+      "price": "188458.00000000",
+      "price_formatted": "188,458",
+      "sale_price": "147961.00000000",
+      "sale_price_formatted": "147,961",
+      "sale_start_at": "02:39:06 20-06-2026",
+      "sale_end_at": "02:39:06 26-07-2026"
+    },
+    "is_sale": true,
+    "average_rating": 0,
+    "reviews_count": 0,
+    "sold_count": 0,
+    "stock": [
+      {
+        "id": 239,
+        "quantity": 85,
+        "quantity_formatted": "85",
+        "available_quantity": 85,
+        "available_quantity_formatted": "85",
+        "reserved_quantity": 0,
+        "reserved_quantity_formatted": "0"
+      },
+      {
+        "id": 240,
+        "quantity": 54,
+        "quantity_formatted": "54",
+        "available_quantity": 54,
+        "available_quantity_formatted": "54",
+        "reserved_quantity": 0,
+        "reserved_quantity_formatted": "0"
+      },
+      {
+        "id": 241,
+        "quantity": 99,
+        "quantity_formatted": "99",
+        "available_quantity": 99,
+        "available_quantity_formatted": "99",
+        "reserved_quantity": 0,
+        "reserved_quantity_formatted": "0"
+      }
+    ],
+    "tags": []
+  }
+}

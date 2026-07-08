@@ -1,0 +1,17 @@
+{
+  "GET https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp": 3,
+  "GET /user/auth/me": 3,
+  "GET /user/categories": 3,
+  "GET /user/products/100/reviews": 3,
+  "GET /user/products/100/reviews/stats": 3,
+  "GET /user/products": 3,
+  "GET /user/favorites": 3,
+  "GET /user/notifications/unread-count": 3,
+  "GET /user/cart": 6,
+  "POST /user/cart/add": 3,
+  "POST /user/favorites/toggle": 2,
+  "GET /user/tokens": 1,
+  "GET /user/wallets": 1,
+  "GET /user/orders": 1,
+  "GET /user/addresses": 1
+}

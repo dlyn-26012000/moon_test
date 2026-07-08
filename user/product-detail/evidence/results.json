@@ -1,0 +1,446 @@
+{
+  "module": "user/product-detail",
+  "url": "https://moon.dlyn.site/products/qui-eos-laborum-variant-tojq17",
+  "executed_at_note": "2026-07-08",
+  "totals": {
+    "total": 72,
+    "pass": 64,
+    "fail": 2,
+    "warn": 6
+  },
+  "api_response_ms": 100,
+  "results": [
+    {
+      "id": "A-01",
+      "status": "PASS",
+      "msg": "Login user001 lấy token (precondition)",
+      "extra": "token OK"
+    },
+    {
+      "id": "API-01",
+      "status": "PASS",
+      "msg": "GET /products/{slug}/detail → 200",
+      "extra": "100ms"
+    },
+    {
+      "id": "API-11",
+      "status": "PASS",
+      "msg": "Response time detail",
+      "extra": "100ms"
+    },
+    {
+      "id": "API-01b",
+      "status": "PASS",
+      "msg": "Schema có price + stock/variants + images",
+      "extra": "variants=3, images=1"
+    },
+    {
+      "id": "API-02",
+      "status": "PASS",
+      "msg": "GET detail slug sai → 404",
+      "extra": "expect 404"
+    },
+    {
+      "id": "API-03",
+      "status": "PASS",
+      "msg": "reviews (200) + stats (200)",
+      "extra": ""
+    },
+    {
+      "id": "API-04",
+      "status": "PASS",
+      "msg": "POST /cart/add hợp lệ → 200",
+      "extra": ""
+    },
+    {
+      "id": "API-05",
+      "status": "PASS",
+      "msg": "POST /cart/add quantity=0 → 422",
+      "extra": "expect 422/4xx"
+    },
+    {
+      "id": "API-05b",
+      "status": "FAIL",
+      "msg": "POST /cart/add quantity=999999 → 500",
+      "extra": "expect 4xx"
+    },
+    {
+      "id": "API-06",
+      "status": "FAIL",
+      "msg": "POST /cart/add product không tồn tại → 500",
+      "extra": "BUG 5xx"
+    },
+    {
+      "id": "API-07",
+      "status": "PASS",
+      "msg": "POST /favorites/toggle no token → 401",
+      "extra": "expect 401"
+    },
+    {
+      "id": "API-08",
+      "status": "PASS",
+      "msg": "POST /reviews no token → 401",
+      "extra": "expect 401"
+    },
+    {
+      "id": "API-09",
+      "status": "PASS",
+      "msg": "POST /reviews có token → 422",
+      "extra": "VALIDATION_ERROR"
+    },
+    {
+      "id": "A-07api",
+      "status": "PASS",
+      "msg": "favorites/toggle có token → 200",
+      "extra": ""
+    },
+    {
+      "id": "API-10",
+      "status": "PASS",
+      "msg": "Header language=en trả translation EN",
+      "extra": "qui dolores praesentium (Variant)"
+    },
+    {
+      "id": "API-13",
+      "status": "PASS",
+      "msg": "GET detail không token vẫn 200 (public)",
+      "extra": "200"
+    },
+    {
+      "id": "G-DSP-01",
+      "status": "PASS",
+      "msg": "Guest load, h1=\"qui eos laborum (Variant)\"",
+      "extra": "HTTP 200"
+    },
+    {
+      "id": "PERF-01",
+      "status": "WARN",
+      "msg": "Load time",
+      "extra": "DOM 438ms / idle 60446ms"
+    },
+    {
+      "id": "G-DSP-02",
+      "status": "PASS",
+      "msg": "SKU hiển thị",
+      "extra": ""
+    },
+    {
+      "id": "G-DSP-03",
+      "status": "PASS",
+      "msg": "Giá hiển thị (VND)",
+      "extra": ""
+    },
+    {
+      "id": "G-DSP-03b",
+      "status": "PASS",
+      "msg": "Giá khuyến mãi / badge %",
+      "extra": "sale UI shown"
+    },
+    {
+      "id": "G-DSP-04",
+      "status": "PASS",
+      "msg": "Tồn kho hiển thị",
+      "extra": ""
+    },
+    {
+      "id": "G-DSP-06",
+      "status": "PASS",
+      "msg": "Ảnh: 7 img, 0 lỗi (naturalWidth=0)",
+      "extra": ""
+    },
+    {
+      "id": "UI-02",
+      "status": "PASS",
+      "msg": "Không có ảnh vỡ",
+      "extra": "0 broken"
+    },
+    {
+      "id": "G-DSP-07",
+      "status": "PASS",
+      "msg": "Fullscreen mở & Escape đóng",
+      "extra": "open=1 afterEsc=0"
+    },
+    {
+      "id": "G-DSP-08",
+      "status": "PASS",
+      "msg": "Tab specs hiển thị bảng thông số",
+      "extra": ""
+    },
+    {
+      "id": "G-DSP-09",
+      "status": "PASS",
+      "msg": "Khu vực đánh giá hiển thị (empty state ổn)",
+      "extra": ""
+    },
+    {
+      "id": "BH-01",
+      "status": "PASS",
+      "msg": "Không có key dịch thô hiển thị",
+      "extra": "clean"
+    },
+    {
+      "id": "G-VAR-01",
+      "status": "PASS",
+      "msg": "Chọn thuộc tính đổi variant",
+      "extra": "SKU PROD-L6IMCNOK-3-10 → PROD-L6IMCNOK"
+    },
+    {
+      "id": "BH-02",
+      "status": "WARN",
+      "msg": "Tổ hợp thuộc tính không có variant",
+      "extra": "ok"
+    },
+    {
+      "id": "G-VAR-03",
+      "status": "PASS",
+      "msg": "Tăng số lượng 1→2",
+      "extra": ""
+    },
+    {
+      "id": "G-VAR-04",
+      "status": "PASS",
+      "msg": "Nút − disabled tại qty=1: true",
+      "extra": ""
+    },
+    {
+      "id": "G-ACT-03",
+      "status": "PASS",
+      "msg": "Wishlist guest → mở Login Modal",
+      "extra": "inputs=2"
+    },
+    {
+      "id": "G-ACT-01",
+      "status": "PASS",
+      "msg": "Add to Cart guest → 1 request",
+      "extra": "giỏ guest theo session"
+    },
+    {
+      "id": "G-ACT-02",
+      "status": "PASS",
+      "msg": "Double-click debounce",
+      "extra": "1 POST /cart/add (kỳ vọng gộp = 1)"
+    },
+    {
+      "id": "G-NAV-01",
+      "status": "PASS",
+      "msg": "Refresh giữ nội dung",
+      "extra": ""
+    },
+    {
+      "id": "G-NAV-02",
+      "status": "PASS",
+      "msg": "Browser Back về Home",
+      "extra": "https://moon.dlyn.site/"
+    },
+    {
+      "id": "G-NAV-03",
+      "status": "PASS",
+      "msg": "Browser Forward về detail",
+      "extra": "https://moon.dlyn.site/products/qui-eos-laborum-variant-tojq17"
+    },
+    {
+      "id": "G-NAV-05",
+      "status": "PASS",
+      "msg": "Slug sai → not-found",
+      "extra": "HTTP 200"
+    },
+    {
+      "id": "G-NAV-06",
+      "status": "PASS",
+      "msg": "Related product điều hướng",
+      "extra": "https://moon.dlyn.site/products/ea-vel-sint-variant-wvnoyq"
+    },
+    {
+      "id": "G-DSP-13",
+      "status": "PASS",
+      "msg": "SP không variant hiển thị đúng",
+      "extra": "HTTP 200"
+    },
+    {
+      "id": "UI-04",
+      "status": "PASS",
+      "msg": "Không tràn ngang (desktop)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "UX-01",
+      "status": "PASS",
+      "msg": "Keyboard Tab di chuyển focus",
+      "extra": "active=BUTTON"
+    },
+    {
+      "id": "UX-03",
+      "status": "PASS",
+      "msg": "Nút icon có aria-label",
+      "extra": "27 nút"
+    },
+    {
+      "id": "BH-08",
+      "status": "PASS",
+      "msg": "XSS qua query string không thực thi",
+      "extra": "__xss=false"
+    },
+    {
+      "id": "SEO-01",
+      "status": "PASS",
+      "msg": "Title chứa tên sản phẩm",
+      "extra": "qui eos laborum (Variant) | Tochi"
+    },
+    {
+      "id": "SEO-02",
+      "status": "PASS",
+      "msg": "Meta description tồn tại",
+      "extra": ""
+    },
+    {
+      "id": "SEO-03",
+      "status": "PASS",
+      "msg": "Canonical tồn tại",
+      "extra": ""
+    },
+    {
+      "id": "SEO-04",
+      "status": "PASS",
+      "msg": "OG + Twitter card",
+      "extra": "og=true tw=true"
+    },
+    {
+      "id": "SEO-05",
+      "status": "PASS",
+      "msg": "SSR content chứa tên sản phẩm",
+      "extra": ""
+    },
+    {
+      "id": "PERF-02",
+      "status": "WARN",
+      "msg": "API gọi lặp",
+      "extra": "{\"GET /user/categories\":13,\"GET /user/cart\":14,\"GET https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":13,\"GET /user/products/100/reviews\":9,\"GET /user/products/100/reviews/stats\":9,\"GET /user/products\":11,\"POST /user/cart/add\":1,\"GET https://api-moon.dlyn.site/storage/images/banner/OR3EqS3kTRTJvNqZkqt7sMoHqS5T6Xvj3zsA3ey5_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/bI48PQTla2VE9PxRkGyR7obbUkm8WIzsQX34t5aG_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/SV2IbgaHkHUSRysM3Ui1DkXEqUJ4L3Ix9pRvyPjF_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/HDCPvivRam6NfgpIAMkRw60uWP4zkYztXerXGnZM_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/YbR5KKaICJJh6FrF8koqGWpEzEB6H7cimX7EsvUF_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/oy5uqD3FD6aB9HaGWplXaRC0FktG0Q8UQFoMkz2d_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/Sdeq1tuHsol2AhTEsrOHkocABL8hVc7g3HChX1hf_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/CZ55chZHTFIKQTxpy1WHoVbCYXvclScV72WVYbgJ_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET https://api-moon.dlyn.site/storage/images/banner/7EUSE1trOSgPCGUY2ys6MiaunfZIZWZC79PQVOni_cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp\":2,\"GET /user/products/99/reviews\":1,\"GET /user/products/99/reviews/stats\":1,\"GET /user/products/qui-eos-laborum-variant-tojq17/detail\":2,\"GET /user/products/1/reviews\":1,\"GET /user/products/1/reviews/stats\":1,\"GET /user/products/ea-vel-sint-variant-wvnoyq/detail\":3,\"GET /user/products/quo-asperiores-quaerat-m0ybqx/detail\":2}"
+    },
+    {
+      "id": "BH-07g",
+      "status": "WARN",
+      "msg": "Console errors (guest)",
+      "extra": "30 lỗi"
+    },
+    {
+      "id": "A-02",
+      "status": "PASS",
+      "msg": "Auth: hiển thị lại đầy đủ",
+      "extra": ""
+    },
+    {
+      "id": "A-12",
+      "status": "PASS",
+      "msg": "Giá auth hiển thị",
+      "extra": "guest=147,961 VND auth=188,458 VND"
+    },
+    {
+      "id": "A-03",
+      "status": "PASS",
+      "msg": "Add to cart auth qty=3",
+      "extra": "payload qty=3, variant=189"
+    },
+    {
+      "id": "A-05",
+      "status": "PASS",
+      "msg": "Debounce auth (1 request)",
+      "extra": "1 req"
+    },
+    {
+      "id": "A-04",
+      "status": "PASS",
+      "msg": "Loading/disable khi thêm giỏ",
+      "extra": "state=true"
+    },
+    {
+      "id": "A-07",
+      "status": "PASS",
+      "msg": "Wishlist add đổi trạng thái",
+      "extra": "Add to favorites → Remove from favorites"
+    },
+    {
+      "id": "A-08",
+      "status": "PASS",
+      "msg": "Wishlist giữ trạng thái sau refresh",
+      "extra": "label=Remove from favorites"
+    },
+    {
+      "id": "A-09",
+      "status": "PASS",
+      "msg": "Wishlist remove",
+      "extra": "label=Add to favorites"
+    },
+    {
+      "id": "A-11",
+      "status": "WARN",
+      "msg": "UI tạo review trên trang detail",
+      "extra": "không có form/nút"
+    },
+    {
+      "id": "A-06",
+      "status": "PASS",
+      "msg": "Buy Now → /checkout",
+      "extra": "https://moon.dlyn.site/checkout"
+    },
+    {
+      "id": "BH-07a",
+      "status": "WARN",
+      "msg": "Console errors (auth)",
+      "extra": "8 lỗi"
+    },
+    {
+      "id": "RS-01",
+      "status": "PASS",
+      "msg": "desktop-1920 (1920×1080)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-02",
+      "status": "PASS",
+      "msg": "desktop-1440 (1440×900)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-03",
+      "status": "PASS",
+      "msg": "desktop-1366 (1366×768)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-04",
+      "status": "PASS",
+      "msg": "ipad-air (820×1180)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-05",
+      "status": "PASS",
+      "msg": "iphone-14 (390×844)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-06",
+      "status": "PASS",
+      "msg": "iphone-se (375×667)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-07",
+      "status": "PASS",
+      "msg": "pixel-7 (412×915)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-08",
+      "status": "PASS",
+      "msg": "galaxy-s23 (360×780)",
+      "extra": "overflow=0px"
+    },
+    {
+      "id": "RS-09",
+      "status": "PASS",
+      "msg": "mobile-landscape (844×390)",
+      "extra": "overflow=0px"
+    }
+  ]
+}

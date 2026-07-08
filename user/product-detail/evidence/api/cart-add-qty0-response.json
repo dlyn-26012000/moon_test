@@ -1,0 +1,9 @@
+{
+  "status": "ERROR",
+  "message": "VALIDATION_ERROR",
+  "errors": {
+    "quantity": [
+      "The quantity field must be at least 1."
+    ]
+  }
+}
