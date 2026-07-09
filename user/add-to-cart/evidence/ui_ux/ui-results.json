@@ -1,0 +1,142 @@
+{
+  "passed": 27,
+  "failed": 0,
+  "total": 27,
+  "results": [
+    {
+      "id": "G-01",
+      "ok": true,
+      "detail": "16 product links"
+    },
+    {
+      "id": "G-02",
+      "ok": true,
+      "detail": "add button present=6"
+    },
+    {
+      "id": "G-03",
+      "ok": true,
+      "detail": "variant=[M,White] items=1 sid=4huwB2B9"
+    },
+    {
+      "id": "G-05",
+      "ok": true,
+      "detail": "qty=2"
+    },
+    {
+      "id": "G-04",
+      "ok": true,
+      "detail": "distinct lines=2"
+    },
+    {
+      "id": "E-04",
+      "ok": true,
+      "detail": "badge=3"
+    },
+    {
+      "id": "E-07",
+      "ok": true,
+      "detail": "sidebar opened=true"
+    },
+    {
+      "id": "G-08",
+      "ok": true,
+      "detail": "persisted items=2"
+    },
+    {
+      "id": "G-09",
+      "ok": true,
+      "detail": "tab2 sid matches=true"
+    },
+    {
+      "id": "G-11",
+      "ok": true,
+      "detail": "all items product=100"
+    },
+    {
+      "id": "G-12",
+      "ok": true,
+      "detail": "no direct add from card (before=2 after=2)"
+    },
+    {
+      "id": "M-01",
+      "ok": true,
+      "detail": "guest items=[{\"pv\":189,\"q\":1}]"
+    },
+    {
+      "id": "M-03",
+      "ok": true,
+      "detail": "token stored=true"
+    },
+    {
+      "id": "M-04",
+      "ok": true,
+      "detail": "user cart after login=[{\"pv\":189,\"q\":1}]"
+    },
+    {
+      "id": "M-06",
+      "ok": true,
+      "detail": "guest items preserved=true"
+    },
+    {
+      "id": "A-01",
+      "ok": true,
+      "detail": "user cart items=1"
+    },
+    {
+      "id": "A-06",
+      "ok": true,
+      "detail": "stock label present=true"
+    },
+    {
+      "id": "A-04",
+      "ok": true,
+      "detail": "qty stepper bounded by stock (visual)"
+    },
+    {
+      "id": "A-09",
+      "ok": true,
+      "detail": "after reload items=1"
+    },
+    {
+      "id": "A-07",
+      "ok": true,
+      "detail": "cart sidebar rendered for user"
+    },
+    {
+      "id": "E-RESP-desktop_1920",
+      "ok": true,
+      "detail": "hscroll=0px @ 1920x1080"
+    },
+    {
+      "id": "E-RESP-desktop_1366",
+      "ok": true,
+      "detail": "hscroll=0px @ 1366x768"
+    },
+    {
+      "id": "E-RESP-ipad",
+      "ok": true,
+      "detail": "hscroll=0px @ 768x1024"
+    },
+    {
+      "id": "E-RESP-iphone_14",
+      "ok": true,
+      "detail": "hscroll=0px @ 390x844"
+    },
+    {
+      "id": "E-RESP-iphone_se",
+      "ok": true,
+      "detail": "hscroll=0px @ 375x667"
+    },
+    {
+      "id": "E-RESP-pixel_7",
+      "ok": true,
+      "detail": "hscroll=0px @ 412x915"
+    },
+    {
+      "id": "E-RESP-galaxy_s23",
+      "ok": true,
+      "detail": "hscroll=0px @ 360x780"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/categories",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/100/reviews?page=1&per_page=10",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/categories",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/100/reviews/stats",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products?includes=thumbnail.file,images.file,tags,translations,prices.token,variants.prices.token&per_page=10",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "post": "{\"product_id\":100,\"product_variant_id\":189,\"quantity\":1,\"session_id\":\"4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "post": "{\"product_id\":100,\"product_variant_id\":189,\"quantity\":1,\"session_id\":\"4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "post": "{\"product_id\":100,\"product_variant_id\":190,\"quantity\":1,\"session_id\":\"4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W\"}"
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/100/reviews/stats",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/categories",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/100/reviews?page=1&per_page=10",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products?includes=thumbnail.file,images.file,tags,translations,prices.token,variants.prices.token&per_page=10",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/categories",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/100/reviews?page=1&per_page=10",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/100/reviews/stats",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products?includes=thumbnail.file,images.file,tags,translations,prices.token,variants.prices.token&per_page=10",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/categories",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?includes=items&session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  },
+  {
+    "method": "DELETE",
+    "url": "https://api-moon.dlyn.site/api/user/cart/34/delete?session_id=4huwB2B9dPaNmvBWDOXUeWyKnrzc1NY6NVpP9E7W",
+    "status": 200,
+    "post": null
+  }
+]

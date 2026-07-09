@@ -1,0 +1,189 @@
+{
+  "status": 200,
+  "body": {
+    "status": "SUCCESS",
+    "message": "CART_RETRIEVED_SUCCESSFULLY",
+    "data": {
+      "id": 8,
+      "user_id": 1,
+      "session_id": null,
+      "items": [
+        {
+          "id": 32,
+          "cart_id": 8,
+          "product_id": 100,
+          "product_variant_id": 189,
+          "quantity": 2,
+          "product": {
+            "id": 100,
+            "sku": "PROD-L6IMCNOK",
+            "has_variants": true,
+            "translations": [
+              {
+                "locale": "en",
+                "locale_name": "US",
+                "name": "qui dolores praesentium (Variant)",
+                "slug": "qui-dolores-praesentium-variant-yjmy0l"
+              },
+              {
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "qui eos laborum (Variant)",
+                "slug": "qui-eos-laborum-variant-tojq17"
+              }
+            ],
+            "thumbnail": {
+              "id": 199,
+              "file_id": 1,
+              "type": "thumbnail",
+              "type_name": "THUMBNAIL",
+              "file": {
+                "id": 1,
+                "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+              }
+            },
+            "price": null,
+            "stock": 0,
+            "is_sale": false,
+            "average_rating": 0,
+            "reviews_count": 0,
+            "sold_count": 0,
+            "favorites_count": 0
+          },
+          "variant": {
+            "id": 189,
+            "sku": "PROD-L6IMCNOK-3-10",
+            "attribute_values": [
+              {
+                "attribute_id": 1,
+                "attribute_value_id": 3,
+                "attribute_name": "size",
+                "attribute_value_name": "M"
+              },
+              {
+                "attribute_id": 2,
+                "attribute_value_id": 10,
+                "attribute_name": "Color",
+                "attribute_value_name": "White"
+              }
+            ],
+            "prices": [
+              {
+                "id": 239,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "188458.00000000",
+                "price_formatted": "188,458",
+                "sale_price": "147961.00000000",
+                "sale_price_formatted": "147,961",
+                "sale_start_at": "02:39:06 20-06-2026",
+                "sale_end_at": "02:39:06 26-07-2026"
+              }
+            ]
+          }
+        },
+        {
+          "id": 33,
+          "cart_id": 8,
+          "product_id": 100,
+          "product_variant_id": 191,
+          "quantity": 1,
+          "product": {
+            "id": 100,
+            "sku": "PROD-L6IMCNOK",
+            "has_variants": true,
+            "translations": [
+              {
+                "locale": "en",
+                "locale_name": "US",
+                "name": "qui dolores praesentium (Variant)",
+                "slug": "qui-dolores-praesentium-variant-yjmy0l"
+              },
+              {
+                "locale": "vi",
+                "locale_name": "VN",
+                "name": "qui eos laborum (Variant)",
+                "slug": "qui-eos-laborum-variant-tojq17"
+              }
+            ],
+            "thumbnail": {
+              "id": 199,
+              "file_id": 1,
+              "type": "thumbnail",
+              "type_name": "THUMBNAIL",
+              "file": {
+                "id": 1,
+                "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+              }
+            },
+            "price": null,
+            "stock": 0,
+            "is_sale": false,
+            "average_rating": 0,
+            "reviews_count": 0,
+            "sold_count": 0,
+            "favorites_count": 0
+          },
+          "variant": {
+            "id": 191,
+            "sku": "PROD-L6IMCNOK-1-8",
+            "attribute_values": [
+              {
+                "attribute_id": 1,
+                "attribute_value_id": 1,
+                "attribute_name": "size",
+                "attribute_value_name": "XS"
+              },
+              {
+                "attribute_id": 2,
+                "attribute_value_id": 8,
+                "attribute_name": "Color",
+                "attribute_value_name": "Yellow"
+              }
+            ],
+            "prices": [
+              {
+                "id": 241,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "517656.00000000",
+                "price_formatted": "517,656",
+                "sale_price": "517656.00000000",
+                "sale_price_formatted": "517,656",
+                "sale_start_at": "02:58:12 09-07-2026",
+                "sale_end_at": "02:58:12 09-07-2026"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "ms": 104
+}

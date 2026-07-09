@@ -1,0 +1,38 @@
+{
+  "module": "user/add-to-cart",
+  "date": "2026-07-09",
+  "tester": "AI QA Automation",
+  "tool": "Playwright 1.61.1 (chromium)",
+  "environment": {
+    "type": "Production-like (staging)",
+    "ui": "https://moon.dlyn.site",
+    "api": "https://api-moon.dlyn.site/api",
+    "account": "user001"
+  },
+  "flows_covered": ["guest", "authenticated", "guest_to_login_merge"],
+  "totals": {
+    "designed_testcases": 56,
+    "executed": 48,
+    "passed": 48,
+    "failed": 0,
+    "blocked": 0,
+    "skipped": 8,
+    "bugs": 1,
+    "potential_risks": 3,
+    "improvements": 6
+  },
+  "suites": {
+    "api": { "file": "script/api.spec.js", "passed": 21, "failed": 0 },
+    "ui": { "file": "script/run.js", "passed": 27, "failed": 0 }
+  },
+  "bugs": [
+    { "id": "BUG-001", "title": "Guest bị chặn Add-to-Cart từ product card & Quick View nhưng được phép từ trang chi tiết (bất nhất)", "severity": "Medium", "priority": "Medium", "status": "Open" }
+  ],
+  "risks": [
+    { "id": "RISK-001", "title": "IDOR giỏ hàng khách qua session_id (không ký, không kiểm sở hữu)", "level": "High" },
+    { "id": "RISK-002", "title": "Merge giỏ khi login không re-validate tồn kho — giỏ có thể vượt kho", "level": "Medium" },
+    { "id": "RISK-003", "title": "Badge giỏ đếm theo số dòng, không theo tổng số lượng — dễ hiểu nhầm", "level": "Low" }
+  ],
+  "release_recommendation": "CONDITIONAL",
+  "notes": "Core add-to-cart hoạt động đúng trên cả 3 luồng (Guest, Authenticated, Guest→Login merge). Không có lỗi chặn release. Nên xử lý BUG-001 và RISK-001 trước khi phát hành rộng."
+}

@@ -1,0 +1,15 @@
+{
+  "status": 200,
+  "body": {
+    "status": "SUCCESS",
+    "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+    "data": {
+      "id": 30,
+      "cart_id": 146,
+      "product_id": 100,
+      "product_variant_id": 189,
+      "quantity": 5
+    }
+  },
+  "ms": 84
+}

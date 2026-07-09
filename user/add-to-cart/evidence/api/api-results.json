@@ -1,0 +1,133 @@
+{
+  "passed": 21,
+  "failed": 0,
+  "total": 21,
+  "results": [
+    {
+      "id": "D-01",
+      "title": "Add hợp lệ v189 x2",
+      "ok": true,
+      "detail": "HTTP 200, 219ms"
+    },
+    {
+      "id": "D-02",
+      "title": "Add cộng dồn (2+3=5)",
+      "ok": true,
+      "detail": "qty=5"
+    },
+    {
+      "id": "D-03",
+      "title": "Vượt tồn kho",
+      "ok": true,
+      "detail": "HTTP 422 INSUFFICIENT_INVENTORY"
+    },
+    {
+      "id": "D-04",
+      "title": "quantity = 0",
+      "ok": true,
+      "detail": "HTTP 422 VALIDATION_ERROR"
+    },
+    {
+      "id": "D-05",
+      "title": "quantity âm",
+      "ok": true,
+      "detail": "HTTP 422 VALIDATION_ERROR"
+    },
+    {
+      "id": "D-06",
+      "title": "quantity không phải số",
+      "ok": true,
+      "detail": "HTTP 422 VALIDATION_ERROR"
+    },
+    {
+      "id": "D-07",
+      "title": "product không tồn tại → PRODUCT_NOT_FOUND",
+      "ok": true,
+      "detail": "HTTP 404 PRODUCT_NOT_FOUND"
+    },
+    {
+      "id": "D-08",
+      "title": "variant không thuộc product → PRODUCT_VARIANT_NOT_FOUND",
+      "ok": true,
+      "detail": "HTTP 404 PRODUCT_VARIANT_NOT_FOUND"
+    },
+    {
+      "id": "D-09",
+      "title": "GET cart tạo session mới",
+      "ok": true,
+      "detail": "session_id len=40"
+    },
+    {
+      "id": "D-15",
+      "title": "Schema CartResource",
+      "ok": true,
+      "detail": "keys=id,user_id,session_id,items"
+    },
+    {
+      "id": "D-14",
+      "title": "Response time < 1500ms",
+      "ok": true,
+      "detail": "75ms"
+    },
+    {
+      "id": "D-10",
+      "title": "Update ⇒ 0 xoá item",
+      "ok": true,
+      "detail": "HTTP 200 PRODUCT_REMOVED_FROM_CART_SUCCESSFULLY"
+    },
+    {
+      "id": "D-11",
+      "title": "Delete item đã xoá",
+      "ok": true,
+      "detail": "HTTP 404 NOT_FOUND"
+    },
+    {
+      "id": "D-12",
+      "title": "IDOR giỏ khách (đọc bằng session_id)",
+      "ok": true,
+      "detail": "CÓ THỂ đọc — rủi ro (không ký/không kiểm sở hữu)"
+    },
+    {
+      "id": "D-13",
+      "title": "SQL injection ở session_id",
+      "ok": true,
+      "detail": "HTTP 200 (không crash 500)"
+    },
+    {
+      "id": "M-03",
+      "title": "Đăng nhập (Precondition)",
+      "ok": true,
+      "detail": "HTTP 200"
+    },
+    {
+      "id": "M-04",
+      "title": "Giỏ sau login có item khách (merge)",
+      "ok": true,
+      "detail": "post=[{\"pv\":189,\"q\":2},{\"pv\":191,\"q\":1}]"
+    },
+    {
+      "id": "M-05",
+      "title": "Merge cộng dồn v189 (pre+2)",
+      "ok": true,
+      "detail": "pre=0 post=2"
+    },
+    {
+      "id": "M-06",
+      "title": "Không mất dữ liệu / v191 re-parent",
+      "ok": true,
+      "detail": "v191=1"
+    },
+    {
+      "id": "M-08",
+      "title": "API/UI đồng nhất (schema)",
+      "ok": true,
+      "detail": "items=2"
+    },
+    {
+      "id": "CLEANUP",
+      "title": "Dọn giỏ user001 sau merge test",
+      "ok": true,
+      "detail": "removed merged items"
+    }
+  ]
+}

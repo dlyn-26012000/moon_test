@@ -1,0 +1,9 @@
+{
+  "status": 422,
+  "body": {
+    "status": "ERROR",
+    "message": "INSUFFICIENT_INVENTORY",
+    "errors": null
+  },
+  "ms": 78
+}
