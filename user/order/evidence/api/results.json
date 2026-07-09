@@ -1,0 +1,298 @@
+[
+  {
+    "id": "API-G01",
+    "name": "Guest cart GET returns a session_id",
+    "group": "Guest",
+    "status": "PASS",
+    "detail": "session=YPl759in…",
+    "evidence": null
+  },
+  {
+    "id": "API-G02",
+    "name": "Guest add-to-cart persists item under session",
+    "group": "Guest",
+    "status": "PASS",
+    "detail": "cart_item=48 qty=2",
+    "evidence": null
+  },
+  {
+    "id": "API-G03",
+    "name": "Guest COD order created (200) with correct subtotal",
+    "group": "Guest",
+    "status": "PASS",
+    "detail": "status=200 subtotal=148948 expected=148948 code=ORD-OHM2Q2PQ",
+    "evidence": null
+  },
+  {
+    "id": "API-G04",
+    "name": "New order status = pending",
+    "group": "Guest",
+    "status": "PASS",
+    "detail": "status=pending",
+    "evidence": null
+  },
+  {
+    "id": "API-G05",
+    "name": "Guest can read own order detail with session_id",
+    "group": "Guest",
+    "status": "PASS",
+    "detail": "status=200",
+    "evidence": null
+  },
+  {
+    "id": "API-G06",
+    "name": "Order detail WITHOUT session_id is denied (404)",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=404",
+    "evidence": null
+  },
+  {
+    "id": "API-G07",
+    "name": "IDOR: foreign session cannot read order detail (404)",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=404",
+    "evidence": null
+  },
+  {
+    "id": "API-G08",
+    "name": "Ordered cart item removed from cart after checkout",
+    "group": "Guest",
+    "status": "PASS",
+    "detail": "remaining=0",
+    "evidence": null
+  },
+  {
+    "id": "API-V01",
+    "name": "Missing shipping + cart_item_ids rejected (422)",
+    "group": "Validation",
+    "status": "PASS",
+    "detail": "status=422",
+    "evidence": null
+  },
+  {
+    "id": "API-V02",
+    "name": "Invalid payment method enum rejected (422)",
+    "group": "Validation",
+    "status": "PASS",
+    "detail": "status=422",
+    "evidence": null
+  },
+  {
+    "id": "API-V03",
+    "name": "Non-existent coupon_code rejected (422)",
+    "group": "Validation",
+    "status": "PASS",
+    "detail": "status=422",
+    "evidence": null
+  },
+  {
+    "id": "API-V04",
+    "name": "Empty cart_item_ids rejected (422)",
+    "group": "Validation",
+    "status": "PASS",
+    "detail": "status=422",
+    "evidence": null
+  },
+  {
+    "id": "API-V05",
+    "name": "IDOR: foreign cart_item_id not usable (order rejected, not 200)",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=500 msg=CART_ITEMS_EMPTY",
+    "evidence": null
+  },
+  {
+    "id": "API-V06",
+    "name": "IDOR attempt did not delete the foreign cart item",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "",
+    "evidence": null
+  },
+  {
+    "id": "API-C01",
+    "name": "Apply SALE10 (10%) on 200k → discount 20000",
+    "group": "Coupon",
+    "status": "PASS",
+    "detail": "status=200 disc=20000",
+    "evidence": null
+  },
+  {
+    "id": "API-C02",
+    "name": "SAVE20 below min_order (100k<200k) rejected",
+    "group": "Coupon",
+    "status": "PASS",
+    "detail": "status=400 msg=COUPON_MIN_ORDER_NOT_MET",
+    "evidence": null
+  },
+  {
+    "id": "API-C03",
+    "name": "SAVE20 (20%, cap 50k) on 1M capped at 50000",
+    "group": "Coupon",
+    "status": "PASS",
+    "detail": "status=200 disc=50000",
+    "evidence": null
+  },
+  {
+    "id": "API-C04",
+    "name": "Private coupon VIP30 as guest rejected",
+    "group": "Coupon",
+    "status": "PASS",
+    "detail": "status=400 msg=COUPON_LOGIN_REQUIRED",
+    "evidence": null
+  },
+  {
+    "id": "API-C05",
+    "name": "COMING15 apply outcome (listed-in-available=true)",
+    "group": "Coupon",
+    "status": "PASS",
+    "detail": "apply status=200 msg=SUCCESS",
+    "evidence": null
+  },
+  {
+    "id": "API-C06",
+    "name": "Order with SALE10 → discount = exactly 10% of subtotal",
+    "group": "Coupon",
+    "status": "PASS",
+    "detail": "sub=268512 disc=26851.2 total=241660.8 (NOTE: fractional VND — see BUG-002)",
+    "evidence": null
+  },
+  {
+    "id": "API-D01",
+    "name": "Wallet payment with 0 VND balance is rejected (guard works)",
+    "group": "Payment",
+    "status": "PASS",
+    "detail": "status=500 msg=INSUFFICIENT_WALLET_BALANCE (balance=0)",
+    "evidence": null
+  },
+  {
+    "id": "API-D02",
+    "name": "Rejected wallet order returns a business error (NOT HTTP 500)",
+    "group": "API",
+    "status": "FAIL",
+    "detail": "status=500 — expected 4xx for a business error (see BUG-001)",
+    "evidence": null
+  },
+  {
+    "id": "API-D03",
+    "name": "Wallet payment with insufficient MOON balance rejected",
+    "group": "Payment",
+    "status": "PASS",
+    "detail": "status=500 msg=INSUFFICIENT_WALLET_BALANCE",
+    "evidence": null
+  },
+  {
+    "id": "API-D04",
+    "name": "Guest cannot pay by wallet (rejected, not 200)",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=500 msg=WALLET_REQUIRES_AUTH",
+    "evidence": null
+  },
+  {
+    "id": "API-D05",
+    "name": "Bank-transfer order returns QR + transfer content",
+    "group": "Payment",
+    "status": "PASS",
+    "detail": "status=200 content=\"Moon ORDVD8W6KYRL3R6X35O\" amount=74474",
+    "evidence": null
+  },
+  {
+    "id": "API-E01",
+    "name": "Order history returns the logged-in user's orders",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "status=200 count=4",
+    "evidence": null
+  },
+  {
+    "id": "API-E02",
+    "name": "Cancel a pending order succeeds",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "status=200",
+    "evidence": null
+  },
+  {
+    "id": "API-E03",
+    "name": "Order status becomes cancelled after cancel",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "status=cancelled",
+    "evidence": null
+  },
+  {
+    "id": "API-E04",
+    "name": "Cancelling an already-cancelled order is rejected",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "status=422 msg=VALIDATION_ERROR",
+    "evidence": null
+  },
+  {
+    "id": "API-E05",
+    "name": "Cancelling a non-owned/non-existent order is rejected",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=404",
+    "evidence": null
+  },
+  {
+    "id": "API-F01",
+    "name": "GET /auth/me without token → 401",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=401",
+    "evidence": null
+  },
+  {
+    "id": "API-F02",
+    "name": "GET /wallets without token → 401",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=401",
+    "evidence": null
+  },
+  {
+    "id": "API-F03",
+    "name": "GET /auth/me with invalid token → 401",
+    "group": "Security",
+    "status": "PASS",
+    "detail": "status=401",
+    "evidence": null
+  },
+  {
+    "id": "API-W01",
+    "name": "Webhook with wrong Authorization key → 401",
+    "group": "Webhook",
+    "status": "PASS",
+    "detail": "status=401",
+    "evidence": null
+  },
+  {
+    "id": "API-W02",
+    "name": "Webhook with NO Authorization header → 401",
+    "group": "Webhook",
+    "status": "PASS",
+    "detail": "status=401",
+    "evidence": null
+  },
+  {
+    "id": "API-W03",
+    "name": "Webhook missing required fields → 401/422",
+    "group": "Webhook",
+    "status": "PASS",
+    "detail": "status=422",
+    "evidence": null
+  },
+  {
+    "id": "API-W04",
+    "name": "Webhook happy-path settlement (staging key unknown → expected 401)",
+    "group": "Webhook",
+    "status": "PASS",
+    "detail": "status=401 (see report.md limitations)",
+    "evidence": null
+  }
+]

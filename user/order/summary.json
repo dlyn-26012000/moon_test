@@ -1,0 +1,56 @@
+{
+  "module": "user/order",
+  "tested_at": "2026-07-09",
+  "tester": "AI QA Automation",
+  "environment": {
+    "type": "staging",
+    "frontend": "https://moon.dlyn.site",
+    "api": "https://api-moon.dlyn.site/api",
+    "account": "user001"
+  },
+  "tools": {
+    "playwright": "1.55.1",
+    "browser": "Chromium (playwright build v1193, 140.0.7339.186)",
+    "runner": "node (custom harness)"
+  },
+  "totals": {
+    "test_cases": 52,
+    "passed": 50,
+    "failed": 2,
+    "blocked_or_limited": 6,
+    "bugs": 4,
+    "potential_risks": 6
+  },
+  "suites": {
+    "api": { "total": 37, "passed": 36, "failed": 1 },
+    "ui": { "total": 15, "passed": 14, "failed": 1 }
+  },
+  "bugs": [
+    { "id": "BUG-001", "title": "Business errors return HTTP 500 instead of 4xx", "severity": "Medium", "priority": "High", "status": "Open" },
+    { "id": "BUG-002", "title": "Fractional VND amounts in discount/total", "severity": "Low-Medium", "priority": "Medium", "status": "Open" },
+    { "id": "BUG-003", "title": "12px horizontal overflow on iPhone SE (375px)", "severity": "Low", "priority": "Medium", "status": "Open" },
+    { "id": "BUG-004", "title": "Inconsistent thousand separators in price display", "severity": "Low", "priority": "Low", "status": "Open" }
+  ],
+  "blocked": [
+    "Wallet successful debit (staging wallet balance = 0, cannot fund without webhook secret)",
+    "Webhook happy-path settlement (staging SEPAY_WEBHOOK_API_KEY unknown)",
+    "Webhook duplicate-idempotency, amount-mismatch, wrong-content (need secret)",
+    "Direct staging DB validation/cleanup (local DB is a separate instance)"
+  ],
+  "coverage": {
+    "guest_flow": true,
+    "logged_in_flow": true,
+    "payment_cod": true,
+    "payment_bank_transfer": "partial (order+QR+content verified; settlement blocked)",
+    "payment_wallet": "partial (guards verified; successful debit blocked)",
+    "coupon": true,
+    "cancel": true,
+    "order_history_detail": true,
+    "webhook_auth": true,
+    "webhook_settlement": false,
+    "responsive": true,
+    "security_idor_authz": true
+  },
+  "release_recommendation": "CONDITIONAL",
+  "release_note": "Core order flow (guest + logged-in, COD + bank-transfer order creation, coupon, cancel, history) works and is secure against the IDOR/authz cases tested. Recommend fixing BUG-001 and BUG-002 before production (they affect API contract correctness and bank-transfer reconciliation), and completing wallet + webhook settlement testing in an environment where the wallet can be funded and the webhook secret is known."
+}

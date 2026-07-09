@@ -1,0 +1,2934 @@
+[
+  {
+    "ts": "2026-07-09T13:09:01.767Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/auth/login",
+    "status": 200,
+    "ms": 701,
+    "request": {
+      "username": "user001",
+      "password": "password"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "LOGIN_SUCCESS",
+      "data": "54|QTncsy8fOY0rTcjGkXaDgn7pvKV6DlSYnZ44vuMm813c0d0a"
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:01.899Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 130,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 170,
+        "user_id": null,
+        "session_id": "YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.002Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 102,
+    "request": {
+      "product_id": 50,
+      "quantity": 2,
+      "session_id": "YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 48,
+        "cart_id": 170,
+        "product_id": 50,
+        "product_variant_id": null,
+        "quantity": 2
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.087Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R",
+    "status": 200,
+    "ms": 85,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 170,
+        "user_id": null,
+        "session_id": "YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R",
+        "items": [
+          {
+            "id": 48,
+            "cart_id": 170,
+            "product_id": 50,
+            "product_variant_id": null,
+            "quantity": 2,
+            "product": {
+              "id": 50,
+              "sku": "PROD-LRXHUOVE",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quia aliquid aut",
+                  "slug": "quia-aliquid-aut-x4hcjz"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "qui saepe debitis",
+                  "slug": "qui-saepe-debitis-ypiod8"
+                }
+              ],
+              "thumbnail": {
+                "id": 99,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 50,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "236425.00000000",
+                "price_formatted": "236,425",
+                "sale_price": "74474.00000000",
+                "sale_price_formatted": "74,474",
+                "sale_start_at": "02:39:04 21-06-2026",
+                "sale_end_at": "02:39:04 21-07-2026"
+              },
+              "stock": 0,
+              "is_sale": true,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.337Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 200,
+    "ms": 250,
+    "request": {
+      "full_name": "QA Guest",
+      "phone": "0900000001",
+      "email": "qa-guest@example.com",
+      "address": "123 Test Street",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ],
+      "cart_item_ids": [
+        48
+      ],
+      "session_id": "YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_CREATED_SUCCESSFULLY",
+      "data": {
+        "id": 11,
+        "order_code": "ORD-OHM2Q2PQ",
+        "full_name": "QA Guest",
+        "phone": "0900000001",
+        "email": "qa-guest@example.com",
+        "address": "123 Test Street",
+        "status": "pending",
+        "status_name": "PENDING",
+        "subtotal": 148948,
+        "subtotal_formatted": "148,948",
+        "discount_amount": 0,
+        "discount_amount_formatted": null,
+        "coupon_code": null,
+        "shipping_fee": 0,
+        "shipping_fee_formatted": "0",
+        "total": 148948,
+        "total_formatted": "148,948",
+        "note": null,
+        "created_at": "2026-07-09T13:09:02.000000Z",
+        "items": [
+          {
+            "id": 12,
+            "product_id": 50,
+            "product_variant_id": null,
+            "quantity": 2,
+            "price": "74474.00",
+            "price_formatted": "74,474",
+            "token_id": 1,
+            "token": "VND",
+            "subtotal": "148948.00",
+            "subtotal_formatted": "148,948",
+            "product": {
+              "id": 50,
+              "sku": "PROD-LRXHUOVE",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quia aliquid aut",
+                  "slug": "quia-aliquid-aut-x4hcjz"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "qui saepe debitis",
+                  "slug": "qui-saepe-debitis-ypiod8"
+                }
+              ],
+              "price": {
+                "id": 50,
+                "price": "236425.00000000",
+                "price_formatted": "236,425",
+                "sale_price": "74474.00000000",
+                "sale_price_formatted": "74,474",
+                "sale_start_at": "02:39:04 21-06-2026",
+                "sale_end_at": "02:39:04 21-07-2026"
+              },
+              "stock": 0,
+              "is_sale": true,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            }
+          }
+        ],
+        "payments": [
+          {
+            "id": 8,
+            "code": "ORDCZQYRN1E0GAZEQEW",
+            "token_id": 1,
+            "token": "VND",
+            "amount": "148948.00",
+            "amount_formatted": "148,948",
+            "discount_amount": 0,
+            "discount_amount_formatted": "0",
+            "final_amount": 148948,
+            "final_amount_formatted": "148,948",
+            "status": 1,
+            "status_name": "PENDING",
+            "method": "cod",
+            "method_name": "COD",
+            "qr_image": null,
+            "evidence_image": null,
+            "created_at": "2026-07-09T13:09:02.000000Z"
+          }
+        ],
+        "currency": "VND",
+        "has_pending_bank_transfer": false
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.413Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/orders/11/detail?session_id=YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R",
+    "status": 200,
+    "ms": 76,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 11,
+        "order_code": "ORD-OHM2Q2PQ",
+        "full_name": "QA Guest",
+        "phone": "0900000001",
+        "email": "qa-guest@example.com",
+        "address": "123 Test Street",
+        "status": "pending",
+        "status_name": "PENDING",
+        "subtotal": "148948.00",
+        "subtotal_formatted": "148,948",
+        "discount_amount": "0.00",
+        "discount_amount_formatted": "0",
+        "coupon_code": null,
+        "shipping_fee": "0.00",
+        "shipping_fee_formatted": "0",
+        "total": "148948.00",
+        "total_formatted": "148,948",
+        "note": null,
+        "created_at": "2026-07-09T13:09:02.000000Z",
+        "items": [
+          {
+            "id": 12,
+            "product_id": 50,
+            "product_variant_id": null,
+            "quantity": 2,
+            "price": "74474.00",
+            "price_formatted": "74,474",
+            "token_id": 1,
+            "token": "VND",
+            "subtotal": "148948.00",
+            "subtotal_formatted": "148,948",
+            "product": {
+              "id": 50,
+              "sku": "PROD-LRXHUOVE",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quia aliquid aut",
+                  "slug": "quia-aliquid-aut-x4hcjz"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "qui saepe debitis",
+                  "slug": "qui-saepe-debitis-ypiod8"
+                }
+              ],
+              "price": {
+                "id": 50,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "236425.00000000",
+                "price_formatted": "236,425",
+                "sale_price": "74474.00000000",
+                "sale_price_formatted": "74,474",
+                "sale_start_at": "02:39:04 21-06-2026",
+                "sale_end_at": "02:39:04 21-07-2026"
+              },
+              "stock": 0,
+              "is_sale": true,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null,
+            "review": null
+          }
+        ],
+        "payments": [
+          {
+            "id": 8,
+            "code": "ORDCZQYRN1E0GAZEQEW",
+            "token_id": 1,
+            "token": "VND",
+            "amount": "148948.00",
+            "amount_formatted": "148,948",
+            "discount_amount": 0,
+            "discount_amount_formatted": "0",
+            "final_amount": 148948,
+            "final_amount_formatted": "148,948",
+            "status": 1,
+            "status_name": "PENDING",
+            "method": "cod",
+            "method_name": "COD",
+            "qr_image": null,
+            "evidence_image": null,
+            "created_at": "2026-07-09T13:09:02.000000Z"
+          }
+        ],
+        "currency": "VND",
+        "has_pending_bank_transfer": false
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.459Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/orders/11/detail",
+    "status": 404,
+    "ms": 46,
+    "request": null,
+    "response": {
+      "status": "ERROR",
+      "message": "NOT_FOUND",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.520Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 60,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 171,
+        "user_id": null,
+        "session_id": "gbDS1Sue9yo4v58c4Ls2RALveoUkBrTqO2DufEl4",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.563Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/orders/11/detail?session_id=gbDS1Sue9yo4v58c4Ls2RALveoUkBrTqO2DufEl4",
+    "status": 404,
+    "ms": 42,
+    "request": null,
+    "response": {
+      "status": "ERROR",
+      "message": "NOT_FOUND",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.606Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R",
+    "status": 200,
+    "ms": 43,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 170,
+        "user_id": null,
+        "session_id": "YPl759invIyZe3UKFPHfZ3ymcoVwJNgjP2XIsT0R",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.650Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 422,
+    "ms": 44,
+    "request": {
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ]
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "VALIDATION_ERROR",
+      "errors": {
+        "full_name": [
+          "The full name field is required when address id is not present."
+        ],
+        "phone": [
+          "The phone field is required when address id is not present."
+        ],
+        "address": [
+          "The address field is required when address id is not present."
+        ],
+        "cart_item_ids": [
+          "The cart item ids field is required."
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.733Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 83,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 172,
+        "user_id": null,
+        "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.813Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 80,
+    "request": {
+      "product_id": 47,
+      "quantity": 1,
+      "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 49,
+        "cart_id": 172,
+        "product_id": 47,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.893Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+    "status": 200,
+    "ms": 80,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 172,
+        "user_id": null,
+        "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+        "items": [
+          {
+            "id": 49,
+            "cart_id": 172,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:02 09-07-2026",
+                "sale_end_at": "13:09:02 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.938Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 422,
+    "ms": 45,
+    "request": {
+      "full_name": "X",
+      "phone": "0900000003",
+      "address": "A",
+      "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "crypto_scam"
+        }
+      ],
+      "cart_item_ids": [
+        49
+      ]
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "VALIDATION_ERROR",
+      "errors": {
+        "payment_methods.0.method": [
+          "The selected payment_methods.0.method is invalid."
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:02.990Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 422,
+    "ms": 51,
+    "request": {
+      "full_name": "X",
+      "phone": "0900000003",
+      "address": "A",
+      "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ],
+      "cart_item_ids": [
+        49
+      ],
+      "coupon_code": "DOES_NOT_EXIST"
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "VALIDATION_ERROR",
+      "errors": {
+        "coupon_code": [
+          "The selected coupon code is invalid."
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.036Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 422,
+    "ms": 46,
+    "request": {
+      "full_name": "X",
+      "phone": "0900000003",
+      "address": "A",
+      "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ],
+      "cart_item_ids": []
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "VALIDATION_ERROR",
+      "errors": {
+        "cart_item_ids": [
+          "The cart item ids field is required."
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.086Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 50,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 173,
+        "user_id": null,
+        "session_id": "lFbSyIsRNNZMiIWLIKiS3PfmEr42SXNuABpEsJmj",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.148Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 62,
+    "request": {
+      "product_id": 47,
+      "quantity": 1,
+      "session_id": "lFbSyIsRNNZMiIWLIKiS3PfmEr42SXNuABpEsJmj"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 50,
+        "cart_id": 173,
+        "product_id": 47,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.212Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=lFbSyIsRNNZMiIWLIKiS3PfmEr42SXNuABpEsJmj",
+    "status": 200,
+    "ms": 64,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 173,
+        "user_id": null,
+        "session_id": "lFbSyIsRNNZMiIWLIKiS3PfmEr42SXNuABpEsJmj",
+        "items": [
+          {
+            "id": 50,
+            "cart_id": 173,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:03 09-07-2026",
+                "sale_end_at": "13:09:03 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.269Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 500,
+    "ms": 57,
+    "request": {
+      "full_name": "X",
+      "phone": "0900000003",
+      "address": "A",
+      "session_id": "EQh2ubgSaHkjtKJcv9Q1NPqOqG8ze85IlehBMyFM",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ],
+      "cart_item_ids": [
+        50
+      ]
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "CART_ITEMS_EMPTY",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.333Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=lFbSyIsRNNZMiIWLIKiS3PfmEr42SXNuABpEsJmj",
+    "status": 200,
+    "ms": 64,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 173,
+        "user_id": null,
+        "session_id": "lFbSyIsRNNZMiIWLIKiS3PfmEr42SXNuABpEsJmj",
+        "items": [
+          {
+            "id": 50,
+            "cart_id": 173,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:03 09-07-2026",
+                "sale_end_at": "13:09:03 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.452Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/coupons/apply",
+    "status": 200,
+    "ms": 118,
+    "request": {
+      "code": "SALE10",
+      "order_total": 200000
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "SUCCESS",
+      "data": {
+        "coupon": {
+          "id": 1,
+          "name": "Giảm 10% toàn bộ đơn hàng",
+          "code": "SALE10",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "10.00",
+          "value_formatted": "10%",
+          "min_order_value": "0.00",
+          "min_order_value_formatted": "0 VND",
+          "max_discount": null,
+          "max_discount_formatted": null,
+          "starts_at": "02:39:06 29-06-2026",
+          "ends_at": "02:39:06 29-09-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        "discount_amount": 20000,
+        "discount_amount_formatted": "20,000",
+        "total_after": 180000,
+        "total_after_formatted": "180,000"
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.521Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/coupons/apply",
+    "status": 400,
+    "ms": 68,
+    "request": {
+      "code": "SAVE20",
+      "order_total": 100000
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "COUPON_MIN_ORDER_NOT_MET",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.577Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/coupons/apply",
+    "status": 200,
+    "ms": 56,
+    "request": {
+      "code": "SAVE20",
+      "order_total": 1000000
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "SUCCESS",
+      "data": {
+        "coupon": {
+          "id": 2,
+          "name": "Giảm 20% tối đa 50k",
+          "code": "SAVE20",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "20.00",
+          "value_formatted": "20%",
+          "min_order_value": "200000.00",
+          "min_order_value_formatted": "200,000 VND",
+          "max_discount": "50000.00",
+          "max_discount_formatted": "50,000 VND",
+          "starts_at": "02:39:06 29-06-2026",
+          "ends_at": "02:39:06 29-07-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        "discount_amount": 50000,
+        "discount_amount_formatted": "50,000",
+        "total_after": 950000,
+        "total_after_formatted": "950,000"
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.682Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/coupons/apply",
+    "status": 400,
+    "ms": 105,
+    "request": {
+      "code": "VIP30",
+      "order_total": 600000
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "COUPON_LOGIN_REQUIRED",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.749Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/coupons/available",
+    "status": 200,
+    "ms": 67,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "SUCCESS",
+      "data": [
+        {
+          "id": 1,
+          "name": "Giảm 10% toàn bộ đơn hàng",
+          "translations": [
+            {
+              "id": 1,
+              "locale": "vi",
+              "locale_name": "VN",
+              "name": "Giảm 10% toàn bộ đơn hàng"
+            },
+            {
+              "id": 2,
+              "locale": "en",
+              "locale_name": "US",
+              "name": "10% Off All Orders"
+            }
+          ],
+          "code": "SALE10",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "10.00",
+          "value_formatted": "10%",
+          "min_order_value": "0.00",
+          "min_order_value_formatted": "0 VND",
+          "max_discount": null,
+          "max_discount_formatted": null,
+          "starts_at": "02:39:06 29-06-2026",
+          "ends_at": "02:39:06 29-09-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        {
+          "id": 2,
+          "name": "Giảm 20% tối đa 50k",
+          "translations": [
+            {
+              "id": 3,
+              "locale": "vi",
+              "locale_name": "VN",
+              "name": "Giảm 20% tối đa 50k"
+            },
+            {
+              "id": 4,
+              "locale": "en",
+              "locale_name": "US",
+              "name": "20% Off (Max 50k)"
+            }
+          ],
+          "code": "SAVE20",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "20.00",
+          "value_formatted": "20%",
+          "min_order_value": "200000.00",
+          "min_order_value_formatted": "200,000 VND",
+          "max_discount": "50000.00",
+          "max_discount_formatted": "50,000 VND",
+          "starts_at": "02:39:06 29-06-2026",
+          "ends_at": "02:39:06 29-07-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        {
+          "id": 4,
+          "name": "Giảm 5% không hết hạn",
+          "translations": [
+            {
+              "id": 7,
+              "locale": "vi",
+              "locale_name": "VN",
+              "name": "Giảm 5% không hết hạn"
+            },
+            {
+              "id": 8,
+              "locale": "en",
+              "locale_name": "US",
+              "name": "5% Off (Never Expires)"
+            }
+          ],
+          "code": "ALWAYS5",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "5.00",
+          "value_formatted": "5%",
+          "min_order_value": "0.00",
+          "min_order_value_formatted": "0 VND",
+          "max_discount": null,
+          "max_discount_formatted": null,
+          "starts_at": null,
+          "ends_at": null,
+          "is_active": true,
+          "visibility": "public"
+        },
+        {
+          "id": 5,
+          "name": "Giảm 50,000 VND",
+          "translations": [
+            {
+              "id": 9,
+              "locale": "vi",
+              "locale_name": "VN",
+              "name": "Giảm 50,000 VND"
+            },
+            {
+              "id": 10,
+              "locale": "en",
+              "locale_name": "US",
+              "name": "50,000 VND Off"
+            }
+          ],
+          "code": "FLAT50K",
+          "type": "fixed",
+          "type_name": "FIXED",
+          "value": "50000.00",
+          "value_formatted": "50,000 VND",
+          "min_order_value": "150000.00",
+          "min_order_value_formatted": "150,000 VND",
+          "max_discount": null,
+          "max_discount_formatted": null,
+          "starts_at": "02:39:06 29-06-2026",
+          "ends_at": "02:39:06 29-12-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        {
+          "id": 8,
+          "name": "Giảm 500 MOON",
+          "translations": [
+            {
+              "id": 15,
+              "locale": "vi",
+              "locale_name": "VN",
+              "name": "Giảm 500 MOON"
+            },
+            {
+              "id": 16,
+              "locale": "en",
+              "locale_name": "US",
+              "name": "500 MOON Off"
+            }
+          ],
+          "code": "MOON500",
+          "type": "fixed",
+          "type_name": "FIXED",
+          "value": "500.00",
+          "value_formatted": "500 MOON",
+          "min_order_value": "1000.00",
+          "min_order_value_formatted": "1,000 VND",
+          "max_discount": null,
+          "max_discount_formatted": null,
+          "starts_at": "02:39:06 29-06-2026",
+          "ends_at": "02:39:06 29-09-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        {
+          "id": 10,
+          "name": "Khuyến mãi sắp tới 15%",
+          "translations": [
+            {
+              "id": 19,
+              "locale": "vi",
+              "locale_name": "VN",
+              "name": "Khuyến mãi sắp tới 15%"
+            },
+            {
+              "id": 20,
+              "locale": "en",
+              "locale_name": "US",
+              "name": "Coming Soon 15% Off"
+            }
+          ],
+          "code": "COMING15",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "15.00",
+          "value_formatted": "15%",
+          "min_order_value": "100000.00",
+          "min_order_value_formatted": "100,000 VND",
+          "max_discount": "30000.00",
+          "max_discount_formatted": "30,000 VND",
+          "starts_at": "02:39:06 06-07-2026",
+          "ends_at": "02:39:06 29-08-2026",
+          "is_active": true,
+          "visibility": "public"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.860Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/coupons/apply",
+    "status": 200,
+    "ms": 110,
+    "request": {
+      "code": "COMING15",
+      "order_total": 200000
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "SUCCESS",
+      "data": {
+        "coupon": {
+          "id": 10,
+          "name": "Khuyến mãi sắp tới 15%",
+          "code": "COMING15",
+          "type": "percentage",
+          "type_name": "PERCENTAGE",
+          "value": "15.00",
+          "value_formatted": "15%",
+          "min_order_value": "100000.00",
+          "min_order_value_formatted": "100,000 VND",
+          "max_discount": "30000.00",
+          "max_discount_formatted": "30,000 VND",
+          "starts_at": "02:39:06 06-07-2026",
+          "ends_at": "02:39:06 29-08-2026",
+          "is_active": true,
+          "visibility": "public"
+        },
+        "discount_amount": 30000,
+        "discount_amount_formatted": "30,000",
+        "total_after": 170000,
+        "total_after_formatted": "170,000"
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.907Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 47,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 174,
+        "user_id": null,
+        "session_id": "nTJiDqqQ9AdwT9dUsGifmU2W9sY5sHMBIwTNg2jG",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:03.961Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 54,
+    "request": {
+      "product_id": 47,
+      "quantity": 2,
+      "session_id": "nTJiDqqQ9AdwT9dUsGifmU2W9sY5sHMBIwTNg2jG"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 51,
+        "cart_id": 174,
+        "product_id": 47,
+        "product_variant_id": null,
+        "quantity": 2
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.037Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=nTJiDqqQ9AdwT9dUsGifmU2W9sY5sHMBIwTNg2jG",
+    "status": 200,
+    "ms": 76,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 174,
+        "user_id": null,
+        "session_id": "nTJiDqqQ9AdwT9dUsGifmU2W9sY5sHMBIwTNg2jG",
+        "items": [
+          {
+            "id": 51,
+            "cart_id": 174,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 2,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:04 09-07-2026",
+                "sale_end_at": "13:09:04 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.165Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 200,
+    "ms": 128,
+    "request": {
+      "full_name": "QA Coupon",
+      "phone": "0900000004",
+      "address": "Coupon St",
+      "session_id": "nTJiDqqQ9AdwT9dUsGifmU2W9sY5sHMBIwTNg2jG",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ],
+      "cart_item_ids": [
+        51
+      ],
+      "coupon_code": "SALE10"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_CREATED_SUCCESSFULLY",
+      "data": {
+        "id": 12,
+        "order_code": "ORD-7MSI4MUL",
+        "full_name": "QA Coupon",
+        "phone": "0900000004",
+        "email": null,
+        "address": "Coupon St",
+        "status": "pending",
+        "status_name": "PENDING",
+        "subtotal": 268512,
+        "subtotal_formatted": "268,512",
+        "discount_amount": 26851.2,
+        "discount_amount_formatted": "26,851.2",
+        "coupon_code": "SALE10",
+        "shipping_fee": 0,
+        "shipping_fee_formatted": "0",
+        "total": 241660.8,
+        "total_formatted": "241,660.8",
+        "note": null,
+        "created_at": "2026-07-09T13:09:04.000000Z",
+        "items": [
+          {
+            "id": 13,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 2,
+            "price": "134256.00",
+            "price_formatted": "134,256",
+            "token_id": 1,
+            "token": "VND",
+            "subtotal": "268512.00",
+            "subtotal_formatted": "268,512",
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "price": {
+                "id": 47,
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:04 09-07-2026",
+                "sale_end_at": "13:09:04 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            }
+          }
+        ],
+        "payments": [
+          {
+            "id": 9,
+            "code": "ORDGQWJD03K4EPFZPDJ",
+            "token_id": 1,
+            "token": "VND",
+            "amount": "268512.00",
+            "amount_formatted": "268,512",
+            "discount_amount": 26851.2,
+            "discount_amount_formatted": "26,851.2",
+            "final_amount": 241660.8,
+            "final_amount_formatted": "241,660.8",
+            "status": 1,
+            "status_name": "PENDING",
+            "method": "cod",
+            "method_name": "COD",
+            "qr_image": null,
+            "evidence_image": null,
+            "created_at": "2026-07-09T13:09:04.000000Z"
+          }
+        ],
+        "currency": "VND",
+        "has_pending_bank_transfer": false
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.231Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/wallets",
+    "status": 200,
+    "ms": 66,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "SUCCESS",
+      "data": [
+        {
+          "id": 3,
+          "amount": "0.00000",
+          "amount_formated": "0",
+          "address": "0x6c1784fd7d1c02d3047fc5e34ac7bdace21cde5e",
+          "token": {
+            "id": 1,
+            "name": "VND",
+            "symbol": "VND",
+            "rate": "1.00000",
+            "rate_formated": "1",
+            "can_deposit": false,
+            "can_withdraw": false,
+            "payment_methods": [
+              "cod",
+              "bank_transfer",
+              "wallet"
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "amount": "0.00000",
+          "amount_formated": "0",
+          "address": "0x80f940968d76e23ed7ac920c91481cb526639d6f",
+          "token": {
+            "id": 2,
+            "name": "MOON",
+            "symbol": "MOON",
+            "rate": "0.00100",
+            "rate_formated": "0.001",
+            "can_deposit": false,
+            "can_withdraw": false,
+            "payment_methods": [
+              "wallet"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.289Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 57,
+    "request": {
+      "product_id": 47,
+      "quantity": 1
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 52,
+        "cart_id": 8,
+        "product_id": 47,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.364Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 74,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 8,
+        "user_id": 1,
+        "session_id": null,
+        "items": [
+          {
+            "id": 52,
+            "cart_id": 8,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:04 09-07-2026",
+                "sale_end_at": "13:09:04 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.446Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 500,
+    "ms": 82,
+    "request": {
+      "full_name": "QA Wallet",
+      "phone": "0900000005",
+      "address": "Wallet St",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "wallet"
+        }
+      ],
+      "cart_item_ids": [
+        52
+      ]
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "INSUFFICIENT_WALLET_BALANCE",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.506Z",
+    "method": "DELETE",
+    "url": "https://api-moon.dlyn.site/api/user/cart/52/delete",
+    "status": 200,
+    "ms": 60,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_REMOVED_FROM_CART_SUCCESSFULLY",
+      "data": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.626Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 120,
+    "request": {
+      "product_id": 40,
+      "quantity": 1
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 53,
+        "cart_id": 8,
+        "product_id": 40,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.690Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 64,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 8,
+        "user_id": 1,
+        "session_id": null,
+        "items": [
+          {
+            "id": 53,
+            "cart_id": 8,
+            "product_id": 40,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 40,
+              "sku": "PROD-BXQTZJLT",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quasi dolores atque",
+                  "slug": "quasi-dolores-atque-bpdwmo"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "deserunt omnis qui",
+                  "slug": "deserunt-omnis-qui-izfd39"
+                }
+              ],
+              "thumbnail": {
+                "id": 79,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 40,
+                "token": {
+                  "id": 2,
+                  "name": "MOON",
+                  "symbol": "MOON",
+                  "rate": "0.00100",
+                  "rate_formated": "0.001",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "wallet"
+                  ]
+                },
+                "price": "245831.00000000",
+                "price_formatted": "245,831",
+                "sale_price": "245831.00000000",
+                "sale_price_formatted": "245,831",
+                "sale_start_at": "13:09:04 09-07-2026",
+                "sale_end_at": "13:09:04 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.741Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/products/ut-omnis-itaque-q3z0in/detail",
+    "status": 404,
+    "ms": 50,
+    "request": null,
+    "response": {
+      "status": "ERROR",
+      "message": "NOT_FOUND",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.819Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 500,
+    "ms": 78,
+    "request": {
+      "full_name": "QA Moon",
+      "phone": "0900000006",
+      "address": "Moon St",
+      "payment_methods": [
+        {
+          "token_id": 2,
+          "method": "wallet"
+        }
+      ],
+      "cart_item_ids": [
+        53
+      ]
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "INSUFFICIENT_WALLET_BALANCE",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.885Z",
+    "method": "DELETE",
+    "url": "https://api-moon.dlyn.site/api/user/cart/53/delete",
+    "status": 200,
+    "ms": 66,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_REMOVED_FROM_CART_SUCCESSFULLY",
+      "data": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:04.992Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 106,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 175,
+        "user_id": null,
+        "session_id": "5EnOEJKMRKnlpyIKv6H5ZJzMsjWHWbU2sMEgn18g",
+        "items": []
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.043Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 51,
+    "request": {
+      "product_id": 47,
+      "quantity": 1,
+      "session_id": "5EnOEJKMRKnlpyIKv6H5ZJzMsjWHWbU2sMEgn18g"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 54,
+        "cart_id": 175,
+        "product_id": 47,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.114Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart?session_id=5EnOEJKMRKnlpyIKv6H5ZJzMsjWHWbU2sMEgn18g",
+    "status": 200,
+    "ms": 71,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 175,
+        "user_id": null,
+        "session_id": "5EnOEJKMRKnlpyIKv6H5ZJzMsjWHWbU2sMEgn18g",
+        "items": [
+          {
+            "id": 54,
+            "cart_id": 175,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:05 09-07-2026",
+                "sale_end_at": "13:09:05 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.194Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 500,
+    "ms": 79,
+    "request": {
+      "full_name": "QA GuestWallet",
+      "phone": "0900000007",
+      "address": "GW St",
+      "session_id": "5EnOEJKMRKnlpyIKv6H5ZJzMsjWHWbU2sMEgn18g",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "wallet"
+        }
+      ],
+      "cart_item_ids": [
+        54
+      ]
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "WALLET_REQUIRES_AUTH",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.254Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 59,
+    "request": {
+      "product_id": 50,
+      "quantity": 1
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 55,
+        "cart_id": 8,
+        "product_id": 50,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.378Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 124,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 8,
+        "user_id": 1,
+        "session_id": null,
+        "items": [
+          {
+            "id": 55,
+            "cart_id": 8,
+            "product_id": 50,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 50,
+              "sku": "PROD-LRXHUOVE",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quia aliquid aut",
+                  "slug": "quia-aliquid-aut-x4hcjz"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "qui saepe debitis",
+                  "slug": "qui-saepe-debitis-ypiod8"
+                }
+              ],
+              "thumbnail": {
+                "id": 99,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 50,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "236425.00000000",
+                "price_formatted": "236,425",
+                "sale_price": "74474.00000000",
+                "sale_price_formatted": "74,474",
+                "sale_start_at": "02:39:04 21-06-2026",
+                "sale_end_at": "02:39:04 21-07-2026"
+              },
+              "stock": 0,
+              "is_sale": true,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.478Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 200,
+    "ms": 99,
+    "request": {
+      "full_name": "QA Bank",
+      "phone": "0900000008",
+      "address": "Bank St",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "bank_transfer"
+        }
+      ],
+      "cart_item_ids": [
+        55
+      ]
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_CREATED_SUCCESSFULLY",
+      "data": {
+        "id": 16,
+        "order_code": "ORD-OE9FNLHW",
+        "full_name": "QA Bank",
+        "phone": "0900000008",
+        "email": null,
+        "address": "Bank St",
+        "status": "pending",
+        "status_name": "PENDING",
+        "subtotal": 74474,
+        "subtotal_formatted": "74,474",
+        "discount_amount": 0,
+        "discount_amount_formatted": null,
+        "coupon_code": null,
+        "shipping_fee": 0,
+        "shipping_fee_formatted": "0",
+        "total": 74474,
+        "total_formatted": "74,474",
+        "note": null,
+        "created_at": "2026-07-09T13:09:05.000000Z",
+        "items": [
+          {
+            "id": 17,
+            "product_id": 50,
+            "product_variant_id": null,
+            "quantity": 1,
+            "price": "74474.00",
+            "price_formatted": "74,474",
+            "token_id": 1,
+            "token": "VND",
+            "subtotal": "74474.00",
+            "subtotal_formatted": "74,474",
+            "product": {
+              "id": 50,
+              "sku": "PROD-LRXHUOVE",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quia aliquid aut",
+                  "slug": "quia-aliquid-aut-x4hcjz"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "qui saepe debitis",
+                  "slug": "qui-saepe-debitis-ypiod8"
+                }
+              ],
+              "price": {
+                "id": 50,
+                "price": "236425.00000000",
+                "price_formatted": "236,425",
+                "sale_price": "74474.00000000",
+                "sale_price_formatted": "74,474",
+                "sale_start_at": "02:39:04 21-06-2026",
+                "sale_end_at": "02:39:04 21-07-2026"
+              },
+              "stock": 0,
+              "is_sale": true,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            }
+          }
+        ],
+        "payments": [
+          {
+            "id": 10,
+            "code": "ORDVD8W6KYRL3R6X35O",
+            "token_id": 1,
+            "token": "VND",
+            "amount": "74474.00",
+            "amount_formatted": "74,474",
+            "discount_amount": 0,
+            "discount_amount_formatted": "0",
+            "final_amount": 74474,
+            "final_amount_formatted": "74,474",
+            "status": 1,
+            "status_name": "PENDING",
+            "method": "bank_transfer",
+            "method_name": "BANK_TRANSFER",
+            "qr_image": null,
+            "evidence_image": null,
+            "created_at": "2026-07-09T13:09:05.000000Z"
+          }
+        ],
+        "currency": "VND",
+        "has_pending_bank_transfer": true
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.931Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/orders/16/bank-transfer",
+    "status": 200,
+    "ms": 453,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "BANK_TRANSFER_INFO_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "bank_name": "MBBANK",
+        "account_number": "6660126012000",
+        "account_holder": "NGUYEN VAN A",
+        "amount": 74474,
+        "amount_formatted": "74,474",
+        "content": "Moon ORDVD8W6KYRL3R6X35O",
+        "qr_url": "https://api-moon.dlyn.site/storage/payments/qr/OHYabKOoTsCERuSxKMZZ3H4Sn2BVZE2w50CuqFEc.png"
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:05.994Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/orders?is_pagination=1&per_page=20",
+    "status": 200,
+    "ms": 62,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDERS_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "items": [
+          {
+            "id": 16,
+            "order_code": "ORD-OE9FNLHW",
+            "full_name": "QA Bank",
+            "phone": "0900000008",
+            "email": null,
+            "address": "Bank St",
+            "status": "pending",
+            "status_name": "PENDING",
+            "subtotal": "74474.00",
+            "subtotal_formatted": "74,474",
+            "discount_amount": "0.00",
+            "discount_amount_formatted": "0",
+            "coupon_code": null,
+            "shipping_fee": "0.00",
+            "shipping_fee_formatted": "0",
+            "total": "74474.00",
+            "total_formatted": "74,474",
+            "note": null,
+            "created_at": "2026-07-09T13:09:05.000000Z",
+            "currency": "VND",
+            "has_pending_bank_transfer": true
+          },
+          {
+            "id": 10,
+            "order_code": "ORD-7OIFL1OY",
+            "full_name": "QA Cancel",
+            "phone": "0900000009",
+            "email": null,
+            "address": "Cancel St",
+            "status": "cancelled",
+            "status_name": "CANCELLED",
+            "subtotal": "268512.00",
+            "subtotal_formatted": "268,512",
+            "discount_amount": "0.00",
+            "discount_amount_formatted": "0",
+            "coupon_code": null,
+            "shipping_fee": "0.00",
+            "shipping_fee_formatted": "0",
+            "total": "268512.00",
+            "total_formatted": "268,512",
+            "note": null,
+            "created_at": "2026-07-09T13:07:49.000000Z",
+            "currency": "VND",
+            "has_pending_bank_transfer": false
+          },
+          {
+            "id": 9,
+            "order_code": "ORD-WKA8MYBA",
+            "full_name": "QA Bank",
+            "phone": "0900000008",
+            "email": null,
+            "address": "Bank St",
+            "status": "pending",
+            "status_name": "PENDING",
+            "subtotal": "74474.00",
+            "subtotal_formatted": "74,474",
+            "discount_amount": "0.00",
+            "discount_amount_formatted": "0",
+            "coupon_code": null,
+            "shipping_fee": "0.00",
+            "shipping_fee_formatted": "0",
+            "total": "74474.00",
+            "total_formatted": "74,474",
+            "note": null,
+            "created_at": "2026-07-09T13:07:48.000000Z",
+            "currency": "VND",
+            "has_pending_bank_transfer": true
+          },
+          {
+            "id": 3,
+            "order_code": "ORD-5OSB5TSP",
+            "full_name": "QA User",
+            "phone": "0900000002",
+            "email": null,
+            "address": "1 Bank St",
+            "status": "pending",
+            "status_name": "PENDING",
+            "subtotal": "134256.00",
+            "subtotal_formatted": "134,256",
+            "discount_amount": "0.00",
+            "discount_amount_formatted": "0",
+            "coupon_code": null,
+            "shipping_fee": "0.00",
+            "shipping_fee_formatted": "0",
+            "total": "134256.00",
+            "total_formatted": "134,256",
+            "note": null,
+            "created_at": "2026-07-09T13:04:06.000000Z",
+            "currency": "VND",
+            "has_pending_bank_transfer": true
+          }
+        ],
+        "meta": {
+          "total": 4,
+          "per_page": 20,
+          "current_page": 1,
+          "last_page": 1
+        }
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.054Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/cart/add",
+    "status": 200,
+    "ms": 60,
+    "request": {
+      "product_id": 47,
+      "quantity": 1
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "PRODUCT_ADDED_TO_CART_SUCCESSFULLY",
+      "data": {
+        "id": 56,
+        "cart_id": 8,
+        "product_id": 47,
+        "product_variant_id": null,
+        "quantity": 1
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.125Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/cart",
+    "status": 200,
+    "ms": 71,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "CART_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 8,
+        "user_id": 1,
+        "session_id": null,
+        "items": [
+          {
+            "id": 56,
+            "cart_id": 8,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "thumbnail": {
+                "id": 93,
+                "file_id": 1,
+                "type": "thumbnail",
+                "type_name": "THUMBNAIL",
+                "file": {
+                  "id": 1,
+                  "path": "uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp",
+                  "url": "https://api-moon.dlyn.site/storage/uploads/2026/05/18/cgMOXUJiYnVsIJBNnFgeXFaP1IN5WcSJkzvBAlrm.webp"
+                }
+              },
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:06 09-07-2026",
+                "sale_end_at": "13:09:06 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.234Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders",
+    "status": 200,
+    "ms": 109,
+    "request": {
+      "full_name": "QA Cancel",
+      "phone": "0900000009",
+      "address": "Cancel St",
+      "payment_methods": [
+        {
+          "token_id": 1,
+          "method": "cod"
+        }
+      ],
+      "cart_item_ids": [
+        56
+      ]
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_CREATED_SUCCESSFULLY",
+      "data": {
+        "id": 17,
+        "order_code": "ORD-KYPO6XET",
+        "full_name": "QA Cancel",
+        "phone": "0900000009",
+        "email": null,
+        "address": "Cancel St",
+        "status": "pending",
+        "status_name": "PENDING",
+        "subtotal": 134256,
+        "subtotal_formatted": "134,256",
+        "discount_amount": 0,
+        "discount_amount_formatted": null,
+        "coupon_code": null,
+        "shipping_fee": 0,
+        "shipping_fee_formatted": "0",
+        "total": 134256,
+        "total_formatted": "134,256",
+        "note": null,
+        "created_at": "2026-07-09T13:09:06.000000Z",
+        "items": [
+          {
+            "id": 18,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "price": "134256.00",
+            "price_formatted": "134,256",
+            "token_id": 1,
+            "token": "VND",
+            "subtotal": "134256.00",
+            "subtotal_formatted": "134,256",
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "price": {
+                "id": 47,
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:06 09-07-2026",
+                "sale_end_at": "13:09:06 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            }
+          }
+        ],
+        "payments": [
+          {
+            "id": 11,
+            "code": "ORDYFNHFXBKZ0NJ0VXG",
+            "token_id": 1,
+            "token": "VND",
+            "amount": "134256.00",
+            "amount_formatted": "134,256",
+            "discount_amount": 0,
+            "discount_amount_formatted": "0",
+            "final_amount": 134256,
+            "final_amount_formatted": "134,256",
+            "status": 1,
+            "status_name": "PENDING",
+            "method": "cod",
+            "method_name": "COD",
+            "qr_image": null,
+            "evidence_image": null,
+            "created_at": "2026-07-09T13:09:06.000000Z"
+          }
+        ],
+        "currency": "VND",
+        "has_pending_bank_transfer": false
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.320Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders/17/cancel",
+    "status": 200,
+    "ms": 85,
+    "request": {
+      "reason": "QA test cancel"
+    },
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_CANCELLED_SUCCESSFULLY",
+      "data": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.404Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/orders/17/detail",
+    "status": 200,
+    "ms": 84,
+    "request": null,
+    "response": {
+      "status": "SUCCESS",
+      "message": "ORDER_RETRIEVED_SUCCESSFULLY",
+      "data": {
+        "id": 17,
+        "order_code": "ORD-KYPO6XET",
+        "full_name": "QA Cancel",
+        "phone": "0900000009",
+        "email": null,
+        "address": "Cancel St",
+        "status": "cancelled",
+        "status_name": "CANCELLED",
+        "subtotal": "134256.00",
+        "subtotal_formatted": "134,256",
+        "discount_amount": "0.00",
+        "discount_amount_formatted": "0",
+        "coupon_code": null,
+        "shipping_fee": "0.00",
+        "shipping_fee_formatted": "0",
+        "total": "134256.00",
+        "total_formatted": "134,256",
+        "note": null,
+        "created_at": "2026-07-09T13:09:06.000000Z",
+        "items": [
+          {
+            "id": 18,
+            "product_id": 47,
+            "product_variant_id": null,
+            "quantity": 1,
+            "price": "134256.00",
+            "price_formatted": "134,256",
+            "token_id": 1,
+            "token": "VND",
+            "subtotal": "134256.00",
+            "subtotal_formatted": "134,256",
+            "product": {
+              "id": 47,
+              "sku": "PROD-X1N4BWBO",
+              "has_variants": false,
+              "translations": [
+                {
+                  "locale": "en",
+                  "locale_name": "US",
+                  "name": "quo exercitationem adipisci",
+                  "slug": "quo-exercitationem-adipisci-ccrka9"
+                },
+                {
+                  "locale": "vi",
+                  "locale_name": "VN",
+                  "name": "quibusdam id consectetur",
+                  "slug": "quibusdam-id-consectetur-xuiwso"
+                }
+              ],
+              "price": {
+                "id": 47,
+                "token": {
+                  "id": 1,
+                  "name": "VND",
+                  "symbol": "VND",
+                  "rate": "1.00000",
+                  "rate_formated": "1",
+                  "can_deposit": false,
+                  "can_withdraw": false,
+                  "payment_methods": [
+                    "cod",
+                    "bank_transfer",
+                    "wallet"
+                  ]
+                },
+                "price": "134256.00000000",
+                "price_formatted": "134,256",
+                "sale_price": "134256.00000000",
+                "sale_price_formatted": "134,256",
+                "sale_start_at": "13:09:06 09-07-2026",
+                "sale_end_at": "13:09:06 09-07-2026"
+              },
+              "stock": 0,
+              "is_sale": false,
+              "average_rating": 0,
+              "reviews_count": 0,
+              "sold_count": 0,
+              "favorites_count": 0
+            },
+            "variant": null,
+            "review": null
+          }
+        ],
+        "payments": [
+          {
+            "id": 11,
+            "code": "ORDYFNHFXBKZ0NJ0VXG",
+            "token_id": 1,
+            "token": "VND",
+            "amount": "134256.00",
+            "amount_formatted": "134,256",
+            "discount_amount": 0,
+            "discount_amount_formatted": "0",
+            "final_amount": 134256,
+            "final_amount_formatted": "134,256",
+            "status": 1,
+            "status_name": "PENDING",
+            "method": "cod",
+            "method_name": "COD",
+            "qr_image": null,
+            "evidence_image": null,
+            "created_at": "2026-07-09T13:09:06.000000Z"
+          }
+        ],
+        "currency": "VND",
+        "has_pending_bank_transfer": false
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.451Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders/17/cancel",
+    "status": 422,
+    "ms": 47,
+    "request": {
+      "reason": "again"
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "VALIDATION_ERROR",
+      "errors": {
+        "status": [
+          "Order cannot be cancelled in its current status."
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.500Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/user/orders/999999/cancel",
+    "status": 404,
+    "ms": 48,
+    "request": {
+      "reason": "idor"
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "NOT_FOUND",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.540Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/auth/me",
+    "status": 401,
+    "ms": 40,
+    "request": null,
+    "response": {
+      "status": "ERROR",
+      "message": "UNAUTHENTICATED",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.576Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/wallets",
+    "status": 401,
+    "ms": 36,
+    "request": null,
+    "response": {
+      "status": "ERROR",
+      "message": "UNAUTHENTICATED",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.621Z",
+    "method": "GET",
+    "url": "https://api-moon.dlyn.site/api/user/auth/me",
+    "status": 401,
+    "ms": 45,
+    "request": null,
+    "response": {
+      "status": "ERROR",
+      "message": "UNAUTHENTICATED",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.662Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/client/sepay/hook",
+    "status": 401,
+    "ms": 41,
+    "request": {
+      "gateway": "MBBANK",
+      "transactionDate": "2026-07-09 10:00:00",
+      "accountNumber": "6660126012000",
+      "content": "Moon ORDVD8W6KYRL3R6X35O",
+      "transferAmount": 74474,
+      "referenceCode": "REF1783602546621",
+      "transferType": "in",
+      "id": 990001
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "UNAUTHORIZED",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.705Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/client/sepay/hook",
+    "status": 401,
+    "ms": 43,
+    "request": {
+      "gateway": "MBBANK",
+      "transactionDate": "2026-07-09 10:00:00",
+      "accountNumber": "6660126012000",
+      "content": "Moon ORDVD8W6KYRL3R6X35O",
+      "transferAmount": 74474,
+      "referenceCode": "REF1783602546621",
+      "transferType": "in",
+      "id": 990002
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "UNAUTHORIZED",
+      "errors": null
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.744Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/client/sepay/hook",
+    "status": 422,
+    "ms": 37,
+    "request": {
+      "gateway": "MBBANK"
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "VALIDATION_ERROR",
+      "errors": {
+        "transactionDate": [
+          "The transaction date field is required."
+        ],
+        "accountNumber": [
+          "The account number field is required."
+        ],
+        "content": [
+          "The content field is required."
+        ],
+        "transferAmount": [
+          "The transfer amount field is required."
+        ],
+        "referenceCode": [
+          "The reference code field is required."
+        ],
+        "id": [
+          "The id field is required."
+        ]
+      }
+    }
+  },
+  {
+    "ts": "2026-07-09T13:09:06.785Z",
+    "method": "POST",
+    "url": "https://api-moon.dlyn.site/api/client/sepay/hook",
+    "status": 401,
+    "ms": 41,
+    "request": {
+      "gateway": "MBBANK",
+      "transactionDate": "2026-07-09 10:00:00",
+      "accountNumber": "6660126012000",
+      "content": "Moon ORDVD8W6KYRL3R6X35O",
+      "transferAmount": 74474,
+      "referenceCode": "REF1783602546621",
+      "transferType": "in",
+      "id": 990003
+    },
+    "response": {
+      "status": "ERROR",
+      "message": "UNAUTHORIZED",
+      "errors": null
+    }
+  }
+]

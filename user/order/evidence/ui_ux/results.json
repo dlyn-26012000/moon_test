@@ -1,0 +1,107 @@
+[
+  {
+    "id": "UI-01",
+    "name": "Home page loads",
+    "group": "UI",
+    "status": "PASS",
+    "detail": "title=Tochi — Mua sắm thời trang & phong cách"
+  },
+  {
+    "id": "UI-02",
+    "name": "Product detail shows Add-to-cart button",
+    "group": "UI",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "id": "UI-03",
+    "name": "Add-to-cart click handled (no crash)",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "id": "UI-04",
+    "name": "Guest can reach checkout page",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "id": "UI-05",
+    "name": "Guest COD order can be placed via UI",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "url=https://moon.dlyn.site/orders/18 toast=1"
+  },
+  {
+    "id": "UI-10",
+    "name": "Auth token present in session (logged-in state)",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "id": "UI-11",
+    "name": "Logged-in checkout renders payment methods",
+    "group": "UI",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "id": "UI-12",
+    "name": "Logged-in COD order placed via UI (redirect to order)",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "url=https://moon.dlyn.site/orders/19 toast=1"
+  },
+  {
+    "id": "UI-13",
+    "name": "Order detail page reached after placing order",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": "url=https://moon.dlyn.site/orders/19"
+  },
+  {
+    "id": "UI-14",
+    "name": "Order history page lists orders",
+    "group": "Functional",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "id": "UI-R-desktop_1920",
+    "name": "Responsive @ desktop_1920 (1920×1080) — no horizontal overflow",
+    "group": "Responsive",
+    "status": "PASS",
+    "detail": "ok"
+  },
+  {
+    "id": "UI-R-desktop_1366",
+    "name": "Responsive @ desktop_1366 (1366×768) — no horizontal overflow",
+    "group": "Responsive",
+    "status": "PASS",
+    "detail": "ok"
+  },
+  {
+    "id": "UI-R-ipad",
+    "name": "Responsive @ ipad (820×1180) — no horizontal overflow",
+    "group": "Responsive",
+    "status": "PASS",
+    "detail": "ok"
+  },
+  {
+    "id": "UI-R-iphone14",
+    "name": "Responsive @ iphone14 (390×844) — no horizontal overflow",
+    "group": "Responsive",
+    "status": "PASS",
+    "detail": "ok"
+  },
+  {
+    "id": "UI-R-iphoneSE",
+    "name": "Responsive @ iphoneSE (375×667) — no horizontal overflow",
+    "group": "Responsive",
+    "status": "FAIL",
+    "detail": "horizontal scroll detected"
+  }
+]
